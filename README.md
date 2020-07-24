@@ -77,7 +77,7 @@ MIT License. See LICENSE file for more information.
 
 ## 💬 **Contributors**
 
-This was a solo project for a UofU Coding Bootcamp, but credit must also be noted for my instructor and TA's, as well as the author of our class curriculum and our SSM. 
+
 
 ## 🔒 **Installation**
 
