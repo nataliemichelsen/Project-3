@@ -39,7 +39,7 @@ Work alone or in a group to produce and present the final project for this Bootc
 
 ## 🔲 **Objective**
 
-A functional and presentable application that meets all project requirements.
+**End Result:** A functional and presentable application that meets all project requirements.
 
 ## 🔑 **Usage**
 
