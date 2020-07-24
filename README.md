@@ -43,33 +43,33 @@ A functional and presentable application that meets all project requirements.
 
 ## 🔑 **Usage**
 
-1. This application is a functional RECIPE INDEX. 
+1. This application is a functional **RECIPE INDEX**. 
 
-2. Users can CREATE AN ACCOUNT that includes the option to EDIT USER PROFILE details.
+2. Users can **CREATE AN ACCOUNT** that includes the option to **EDIT USER PROFILE** details. The **USER PROFILE** contatins _**phone number, email, first name, last name, and username**_. 
 
-3. Users can STORE recipies, which can be ACCESSED at any time, for personal use. 
+3. Users can **STORE** recipies, which can be **ACCESSED** at any time, for personal use. 
 
-4. Users can VIEW other recipes submitted to the MAIN THREAD by other users who wish to make their recipies PUBLIC. 
+4. Users can **VIEW** other recipes submitted to the **MAIN THREAD** by other users who wish to make their recipies **PUBLIC**. 
 
-5. PRIVATE recipes can only be viewed by the USER that submitted them. 
+5. **PRIVATE** recipes can only be viewed by the **USER** that submitted them. 
 
-6. Users can LIKE, SAVE, COMMENT on, and SHARE public recipes. 
+6. Users can **LIKE, SAVE, COMMENT on, and SHARE** public recipes. 
 
-7. The SHARE option includes the ability to COPY LINK TO CB, share via SMS, and share via email. 
+7. The **SHARE** option includes the ability to **COPY LINK TO CB, share via SMS, and share via EMAIL**. 
 
-8. The SAVE options includes the ability to BOOKMARK other recipes, allowing for easier access at any time.
+8. The **SAVE** options includes the ability to **BOOKMARK** other recipes, allowing for easier access at any time.
 
-9. The COMMENT feature allows users to share their experiences with any particular PUBLIC recipe. COMMMENTS can be removed by the OWNER of the recipe only. 
+9. The **COMMENT** feature allows users to share their experiences with any particular **PUBLIC** recipe. **COMMMENTS** can be removed by the **OWNER** of the recipe only. 
 
-10. Users can both EDIT and DELETE their own recipes at any time. 
+10. Users can both **EDIT and DELETE** their own recipes at any time. 
 
-11. This app includes GOOGLE AUTHENTICATOR, VERIFIED PASSWORD, and PASSWORD RESET functionality. 
+11. This app includes **GOOGLE AUTHENTICATOR, VERIFIED PASSWORD, and PASSWORD RESET functionality**. 
 
-12. Users can SEARCH the application for all PUBLIC RECIPIES uploaded by other users. 
+12. Users can **SEARCH** the application for all **PUBLIC RECIPIES** uploaded by other users. 
 
-13. CONNECTIONS may be made between users, similar to "friending" or "following".
+13. **CONNECTIONS** may be made between users, similar to _**"friending" or "following"**_.
 
-14. This application can be used as a SOCIAL NETWORK for recipe lovers and chefs alike.
+14. This application can be used as a **SOCIAL NETWORK** for recipe lovers and chefs alike.
 
 ## © **Licence**
 
