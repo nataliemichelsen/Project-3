@@ -2,11 +2,11 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-// class -> className
+// footer function
 function Footer() {
     return (
         <div className="footer">
-            <p>© NVM 2020</p>
+            <p>© Recipe Index 2020</p>
         </div>
     )
 }
