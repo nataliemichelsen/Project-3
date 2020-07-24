@@ -1,0 +1,384 @@
+body {
+        background-image: image("Master/assets/imgs/Smoke Background.jpg");
+}
+
+.footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: #333333;
+          border-style: solid;
+          border-left: 0px;
+          border-right: 0px;
+          border-bottom: 0px;
+          border-color: #f7b7d3;
+          border-width: 14px;
+          color: whitesmoke;
+          text-align: center;
+          padding-top: 14px;
+        }
+
+#header {
+        background-color: #f7b7d3;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #f7b7d3;
+        color: #333333;
+        padding: 4px;
+}
+
+.col-md-4 {
+        border: solid;
+        border-width: 4px;
+        border-color: #f7b7d3;
+}
+
+.email {
+        padding-top: 14px;
+        font-style: italic;
+        font-weight: bold;
+        color: #f7b7d3;
+}
+
+.phone {
+        font-style: italic;
+        font-weight: bold;
+        color: #f7b7d3;
+}
+
+.instagram {
+        font-weight: bold;
+        font-size: medium;
+        color: #f7b7d3;
+        padding-bottom: 14px;
+}
+
+.contactInfo {
+        padding-bottom: 100px;
+}
+
+/* #info {
+        
+} */
+
+#infoContainer {
+        padding-top: 14px;
+        font-size: 24px;
+}
+
+#indexImage {
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        background-color: #333333;
+        padding: 14px;
+}
+
+#indexContainer {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#formLabels {
+        font-weight: bold;
+}
+
+#navbarbutton {
+        background-color: white;
+        border-bottom: 14px;
+        border-style: solid;
+        border-color: #f7b7d3;
+        border-width: 2px;
+}
+
+#items {
+        background-color: white;
+        border-style: solid;
+        border-color: #f7b7d3;
+        border-width: 4px;
+        padding: 4px;
+}
+
+.nav-item1 {
+        border: solid;
+        border-left: 0px;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-color: #f7b7d3;
+}
+
+.navbar {
+        border-style: solid;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border-color: #f7b7d3;
+        border-width: 14px;
+}
+
+#htags {
+        color: #f7b7d3;
+        padding-top: 24px;
+        text-align: center;
+        font-size: 44px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h4Details {
+        font-style: italic;
+        font-size: 14px;
+        padding-bottom: 24px;
+        text-align: center;
+}
+
+#portfolioImage {
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        background-color: #333333;
+        padding: 14px;
+}
+
+.awardTitle {
+        font-size: 30px;
+        text-align: center;
+        color: #f7b7d3;
+}
+
+.projectTitle {
+        padding-top: 14px;
+        text-align: center;
+        font-size: 24px;
+        color: #f7b7d3;
+}
+
+.projectDate {
+        padding-bottom: 14px;
+        text-align: center;
+        font-style: italic;
+        font-size: 10px;
+}
+
+.projectDetails {
+        text-align: center;
+        font-size: 14px;
+}
+
+#websiteImage {
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        background-color: #333333;
+        padding: 14px;
+}
+
+.websiteTitle {
+        padding-top: 14px;
+        text-align: center;
+        font-size: 24px;
+        color: #f7b7d3;
+}
+
+.launchDate {
+        padding-bottom: 14px;
+        text-align: center;
+        font-style: italic;
+        font-size: 10px;
+        color: #f7b7d3;
+}
+
+.websiteDetails {
+        text-align: center;
+        font-size: 14px;
+}
+
+.websiteDetails1 {
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 14px;
+}
+
+.projectButtons {
+        align-items: stretch;
+        background-color: #f7b7d3;
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        font-size: 16px;
+        color: #333333;
+        margin-left: 104px;
+        margin-right: 0px;
+        padding: 4px;
+}
+
+.projectButtons2 {
+        align-items: stretch;
+        background-color: #f7b7d3;
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        font-size: 16px;
+        color: #333333;
+        margin-left: 14px;
+        margin-right: 0px;
+        padding: 4px;
+}
+
+.projectButtons3 {
+        align-items: stretch;
+        background-color: #f7b7d3;
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        font-size: 16px;
+        color: #333333;
+        margin-left: 4px;
+        margin-right: 0px;
+        margin-top: 14px;
+        padding: 4px;
+}
+
+.img-thumbnail1 {
+       max-width: 400px;
+       max-height: 400px; 
+       align-items: center;
+       margin-left: 70px;
+       margin-right: 70px;
+       margin-bottom: 50px;
+       padding-bottom: 14px;
+}
+
+.img-thumbnail2 {
+        margin-bottom: 14px;
+        max-width: 340px;
+        max-height: 340px; 
+}
+
+#portfolio {
+        color: whitesmoke;
+        font-size: 18px;
+        border: #f7b7d3;
+        border-style: solid;
+        border-width: 4px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#portfolioContainer {
+        padding-bottom: 114px;
+}
+
+.dropdown {
+        background-color: #f7b7d3;
+        border-style: solid;
+        border-color: #f7b7d3;
+}
+
+#dropdown-bar {
+        background-color: transparent;
+        border-style: solid;
+        border-color: transparent;
+        padding: 4px;
+        padding-top: 28px;
+}
+
+#dropdown-items {
+        background-color: white;
+        border: solid;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-color: #f7b7d3;
+        border-width: 4px;
+}
+
+#reviewSearch {
+        text-align: center;
+        font-size: 14px;
+}
+
+#searchButton {
+
+}
+
+.reviewTitle {
+        padding-top: 14px;
+        text-align: center;
+        font-size: 24px;
+        color: #f7b7d3;
+}
+
+.letterDate {
+        padding-top: 4px;
+        text-align: center;
+        font-style: italic;
+        font-size: 10px;
+}
+
+.letterDetails {
+        text-align: center;
+        font-size: 14px;
+        font-style: italic;
+        padding-bottom: 14px;
+}
+
+#pdfButton {
+        color: #333333;
+        background-color: #f7b7d3;
+        border-style: solid;
+        border-color: #f7b7d3;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 120px;
+        margin-top: 14px;
+}
+
+#linkButton {
+        color: #333333;
+        background-color: #f7b7d3;
+        border-style: solid;
+        border-color: #f7b7d3;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 500;
+}
+
+#contactsubmit {
+        color: #333333;
+        background-color: #f7b7d3;
+        border-style: solid;
+        border-color: #f7b7d3;
+        border-radius: 0%;
+        padding: 14px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#exampleFormControlInput1 {
+        border-style: solid;
+        border-color: #f7b7d3;
+        border-width: 2px; 
+        font-size: small;
+}
+
+#exampleFormControlTextarea1 {
+        border-style: solid;
+        border-color: #f7b7d3;
+        border-width: 2px; 
+        font-size: small;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
