@@ -15,7 +15,7 @@
 
 ## ❔ **Description**
 
-
+This is a functional recipe index that works similarly to a social network. Examples of similar applications would include AllRecipes, Yummly, and Paprika. 
 
 ## 💡 **Assignment Instructions**
 
