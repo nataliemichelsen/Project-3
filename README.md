@@ -15,7 +15,9 @@
 
 ## ❔ **Description**
 
-This is a functional recipe index that works similarly to a social network. Examples of similar applications would include AllRecipes, Yummly, and Paprika. 
+This is a functional recipe index that works similarly to a social network. 
+
+Examples of similar applications would include AllRecipes, Yummly, and Paprika. 
 
 ## 💡 **Assignment Instructions**
 
@@ -23,12 +25,17 @@ Work alone or in a group to produce and present the final project for this Bootc
 
 ## 📌 **Assignment Requirements**
 
-- Use React
-- 
-- 
-- 
-- 
-- 
+- Have real-world functionality or value
+- Use ReactJS
+- Use Node and Express Web Server
+- Backed by MySQL or MongoDB Database with a Sequelize or Mongoose ORM
+- Use both GET and POST routes for retreiving and adding new data
+- Be deployed using Heroku with data
+- Utilize three libraries / packages / technologies not discuess in class
+- Polished Front-End / User Interface
+- Allow for authentication of users in any way
+- MVC Paradigm folder structure
+- Meet good-quality coding standards including indentation / scoping / naming
 
 ## 🔲 **Objective**
 
