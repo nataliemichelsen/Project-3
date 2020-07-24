@@ -43,27 +43,33 @@ A functional and presentable application that meets all project requirements.
 
 ## 🔑 **Usage**
 
--This is a functional RECIPE INDEX. 
+1. This application is a functional RECIPE INDEX. 
 
--Users can create an account to STORE recipe DATA to their LOCAL STORAGE.
+2. Users can CREATE AN ACCOUNT that includes the option to EDIT USER PROFILE details.
 
--Users can STORE recipies, which can be ACCESSED at any time, for personal use. 
+3. Users can STORE recipies, which can be ACCESSED at any time, for personal use. 
 
--Users can VIEW other recipes submitted to the MAIN THREAD by other users who wish to make their recipies PUBLIC. 
+4. Users can VIEW other recipes submitted to the MAIN THREAD by other users who wish to make their recipies PUBLIC. 
 
--PRIVATE recipes can only be viewed by the USER that submitted them. 
+5. PRIVATE recipes can only be viewed by the USER that submitted them. 
 
--Users can LIKE, SAVE, and SHARE public recipes. 
+6. Users can LIKE, SAVE, COMMENT on, and SHARE public recipes. 
 
--Users can both EDIT and DELETE their own recipes at any time. 
+7. The SHARE option includes the ability to COPY LINK TO CB, share via SMS, and share via email. 
 
--This app includes GOOGLE AUTHENTICATOR and PASSWORD RESET functionality. 
+8. The SAVE options includes the ability to BOOKMARK other recipes, allowing for easier access at any time.
 
--Users can SEARCH the MAIN THREAD for PUBLIC RECIPIES uploaded by other users. 
+9. The COMMENT feature allows users to share their experiences with any particular PUBLIC recipe. COMMMENTS can be removed by the OWNER of the recipe only. 
 
--CONNECTIONS may be made between users, similar to "friending" or "following".
+10. Users can both EDIT and DELETE their own recipes at any time. 
 
--This application can be used as a SOCIAL NETWORK for recipe lovers and chefs alike.
+11. This app includes GOOGLE AUTHENTICATOR, VERIFIED PASSWORD, and PASSWORD RESET functionality. 
+
+12. Users can SEARCH the application for all PUBLIC RECIPIES uploaded by other users. 
+
+13. CONNECTIONS may be made between users, similar to "friending" or "following".
+
+14. This application can be used as a SOCIAL NETWORK for recipe lovers and chefs alike.
 
 ## © **Licence**
 
