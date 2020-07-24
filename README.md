@@ -36,15 +36,15 @@ A functional and presentable application that meets all project requirements.
 
 ## 🔑 **Usage**
 
--This is a functional recipe index. 
+-This is a functional RECIPE INDEX. 
 
--Users can create an account to store recipe data to their local storage.
+-Users can create an account to STORE recipe DATA to their LOCAL STORAGE.
 
--Users can store recipies, which can be accessed at any time, for personal use. 
+-Users can STORE recipies, which can be ACCESSED at any time, for personal use. 
 
--Users can view other recipes submitted to the MAIN THREAD by other users who wish to make their recipies PUBLIC. 
+-Users can VIEW other recipes submitted to the MAIN THREAD by other users who wish to make their recipies PUBLIC. 
 
--PRIVATE recipes can only be viewed by the user that submitted them. 
+-PRIVATE recipes can only be viewed by the USER that submitted them. 
 
 -Users can LIKE, SAVE, and SHARE public recipes. 
 
