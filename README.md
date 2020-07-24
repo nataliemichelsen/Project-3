@@ -1,4 +1,4 @@
-# Project-3 - Recipe Index
+# Project 3 - Recipe Index
 
 ## **Table of Contents**
 
