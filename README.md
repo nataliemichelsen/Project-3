@@ -39,6 +39,8 @@ Work alone or in a group to produce and present the final project for this Bootc
 
 ## 🔲 **Objective**
 
+**Pre-Work:** Outline the project idea and begin pseudo-coding to determine a direction to follow.
+**During Developement:** Follow the requirements and guidelines to stay-on-track in order to produce an "A" worthy application. Ask for help when necessary. 
 **End Result:** A functional and presentable application that meets all project requirements.
 
 ## 🔑 **Usage**
