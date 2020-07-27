@@ -21,9 +21,12 @@ function Nav() {
                         <Link className="nav-link" to="Portfolio" style="color: #333333;">Add Recipe</Link>
                     </li>
                     <li className="nav-item1">
-                        <Link className="nav-link" to="Collaborations" style="color: #333333;">About</Link>
+                        <Link className="nav-link" to="Portfolio" style="color: #333333;">Search Recipes</Link>
                     </li>
                     <li className="nav-item1">
+                        <Link className="nav-link" to="Collaborations" style="color: #333333;">About</Link>
+                    </li>
+                    <li className="nav-item2">
                         <Link className="nav-link" to="Contact" style="color: #333333;">Contact</Link>
                     </li>
                 </ul>

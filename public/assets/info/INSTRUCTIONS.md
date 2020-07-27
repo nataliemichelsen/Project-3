@@ -1,94 +1,184 @@
-# Unit 20 React Homework: React Portfolio
+# KEY 
 
-Now that you've worked with React and have multiple projects to share, you'll be updating your portfolio and other materials to build toward being employer competitive. Creating a portfolio using React will help set you apart from other developers whose portfolios do not use some of the latest technologies.
+☐ - left to complete
+✓ - completed
 
-If you are opting out of career services, this is *still a required assignment*. Part of being a web developer means being a part of a community. Having a place to share your projects is *necessary* if you're applying for jobs, but is still *critical* on your journey as a developer.
+# APPLICATION USAGE
 
-## Requirements
+1. This application is a functional RECIPE INDEX.
 
-* Updated portfolio featuring 6 total projects
+2. Users can CREATE AN ACCOUNT that includes the option to EDIT USER PROFILE details. 
+The USER PROFILE contains phone number, email, first name, last name, and username.
 
-* Use React
+3. Users can STORE recipes, which can be ACCESSED at any time, for personal use.
+The term "BOOKMARK" is used for this functionality. 
 
-* A `Header` component that appears on multiple pages
+4. Users can VIEW other recipes submitted to the MAIN THREAD by other users who wish to make their recipes PUBLIC.
 
-* A single `Project` component that will be used multiple times on a single page 
+5. PRIVATE recipes can only be viewed by the USER that submitted them.
 
-* Navigation with React Router, dynamic rendering, or another third part router
+6. Users can LIKE, SAVE, COMMENT on, and SHARE public recipes.
 
-* A `Footer` component that appears on multiple pages
+7. The SHARE option includes the ability to COPY LINK TO CB, share via SMS, and share via EMAIL.
 
-* Update GitHub profile with pinned repositories featuring those same projects
+8. The SAVE options includes the ability to BOOKMARK other recipes, allowing for easier access at any time.
 
-## Grading
+9. The COMMENT feature allows users to share their experiences with any particular PUBLIC recipe. 
+COMMENTS can be removed by the OWNER of the recipe only.
 
-| Requirement    | Weight |
-| -------------- | ------ |
-| Portoflio      | 90%    |
-| GitHub Profile | 10%    |
+10. Users can both EDIT and DELETE their own recipes at any time.
 
+11. This app includes GOOGLE AUTHENTICATOR, VERIFIED PASSWORD, and PASSWORD RESET functionality.
 
-## Instructions
+12. Users can SEARCH the application for all PUBLIC RECIPES uploaded by other users.
 
-  - [Updated Portfolio](#updated-portfolio)
-    - [Design](#design)
-  - [React](#react)
-  - [Updated LinkedIn Profile](#updated-linkedin-profile)
+13. CONNECTIONS may be made between users, similar to "friending" or "following".
 
-### Updated Portfolio
+14. This application can be used as a SOCIAL NETWORK for recipe lovers and chefs alike.
 
-Your updated site should still have all of the content it previously had:
+# TASKS 
 
-* Your name
+  ## GRADING METRICS
 
-* Links to your GitHub profile & LinkedIn page as well as your email address and phone number
+  ☐ Concept
+  ☐ Design
+  ☐ Functionality
+  ☐ Collaboration
+  ☐ Presentation
 
-* A link to a PDF of your resume with updated projects
+  ## PROJECT REQUIREMENTS
 
-* A list of projects. For each project, make sure you have the following:
+  ☐ Use ReactJS
+  ☐ Have real-world functionality or value
+  ☐ Use Node and Express Web Server
+  ☐ Backed by MySQL or MongoDB Database with a Sequelize or Mongoose ORM
+  ☐ Use both GET and POST routes for retrieving and adding new data
+  ☐ Be deployed using Heroku with data
+  ☐ Utilize three libraries / packages / technologies not discuss in class
+  ☐ Polished Front-End / User Interface
+  ☐ Allow for authentication of users in any way
+  ☐ MVC Paradigm folder structure
+  ☐ Meet good-quality coding standards including indentation / scoping / naming
+  ☐ Mobile-First layout preferred
 
-  * Project title
+## UTILITY - REQUIRED
 
-  * Link to the deployed version
+  ☐ Create a New Account
+      ☐ First Name & Last Name
+      ☐ Phone Number
+      ☐ Email
+      ☐ Username
+  ☐ Password Reset
+  ☐ Password Verification 
+  ☐ Google Authenticator
+  ☐ Login / Logout
 
-  * Link to the GitHub repository
+## FUNCTIONALITY - REQUIRED
 
-  * GIF or screenshot of the deployed application
+  ☐ NavBar (all with vector icons)
+      ☐ + Add New Recipe
+      ☐ Search 
+      ☐ Home 
+      ☐ Logout 
+  ☐ Dropdown (all with vector icons)
+      ☐ User Profile 
+      ☐ Bookmarked Recipes
+      ☐ Settings
+      ☐ Contact
+      ☐ Help
+  ☐ + Add New Recipe 
+      <!-- (page - add recipe) -->
+  ☐ Edit Existing Recipe  
+      <!-- (page - edit recipe) -->
+  ☐ Delete Existing Recipe  
+      <!-- (page - edit recipe) -->
+  ☐ View All Recipes 
+      <!-- (page - home) -->
+  ☐ Search Bar & Results
+      <!-- (page - search recipes) -->
 
+## FUNCTIONALITY - OPTIONAL
 
-#### Design
+  ☐ Insert vector icons where necessary (see list below)
+  ☐ User Connections (friending / following)
+      <!-- (page - my connections) -->
+  ☐ Public / Private Recipe Option (with vector icon)
+      <!-- (page - edit recipe) -->
+  ☐ Like / Favorite Recipe Option
+      <!-- (page - view recipe) -->
+  ☐ Bookmark Option & Bookmarked Recipes Page
+      <!-- (page - bookmarked recipes) -->
+  ☐ Comment on Recipes Feature
+      <!-- (page - view recipe) -->
+  ☐ Share Recipe Feature - 
+      ☐ Send Via Email/SMS
+      ☐ Copy Link to CB
+      ☐ Print Recipe
+      <!-- (page - view recipe) -->
+  ☐ Automatically Updating Home Feed (similar to a social network)
+      <!-- (page - home) -->
 
-As with the previous portfolio homework, "good" design is subjective. Your site should look
-"polished." Here are a few guidelines on what that means:
+## PRESENTATION - REQUIRED
 
-* Mobile-first design
+  ☐ PowerPoint
+  ☐ Run-Through
 
-* Choose a color palette for your site so it doesn't just look like
-the default bootstrap theme or an unstyled HTML site. You may we
+## VECTOR ICONS - OPTIONAL
+<!-- (file name of each icon is listed to the right of each element) -->
 
-* Make sure the font size is large enough to read, and that the colors don't cause eye strain.
+  ### NAV
+          ☐ home icon - home
+          ☐ add icon - add or plus
+          ☐ search icon - search
+          ☐ logout icon - exit
 
-* If you want to go above and beyond, try using animations and react component libraries. Note 
-that this will _not_ affect your grade, but it may impact how potentials employers gauge your knowledge.
+  ### DROPDOWN
+          ☐ ||| for dropdown - menu or equal or pad
+          ☐ help / info icon - help
+          ☐ settings icon - settings
+          ☐ profile icon - user
 
-### React
+  ### ADD RECIPE
+          ☐ private icon - padlock or switch
+          ☐ public icon - lock or switch
 
-Additionally, this new portfolio should be created using React.
+  ### EDIT RECIPE
+          ☐ delete icon - trash
+          ☐ edit icon - edit
+          ☐ private icon - padlock or switch
+          ☐ public icon - lock or switch
 
-At a minimum, your portfolio should include the following:
+  ### VIEW RECIPE
+          ☐ like icon - like
+          ☐ dislike icon - dislike
+          ☐ favorite icon - heart
+          ☐ comment icon - notebook
+          ☐ share icon - share
+          ☐ mail icon - folder
+          ☐ sms icon - smartphone
+          ☐ copy icon - notepad
+          ☐ download icon - folder or save
+          ☐ print icon - print
+          ☐ bookmark item / save icon - star or bookmark
 
-* A `Header` component that appears on multiple pages
+  ### CONNECTIONS
+          ☐ user connection - user
 
-* A single `Project` component that will be used multiple times on a single page 
+## New Technology Ideas
 
-* Navigation with React Router, dynamic rendering, or another third part router
-
-* A `Footer` component that appears on multiple pages
-
-
-### Updated LinkedIn Profile 
-
-Make sure to update your LinkedIn Profile with the new skills you've acquired since the last time it was updated.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+- D3.js - Library useful for data and graphing
+- Glimmer - Front-end library
+- anime.js - Front-end library for animations and micro-movements
+- AOS (Animate on Scroll) - Animations on user scroll
+- Cleave.js - Format input fields as the user types in
+- Multiple.js - Allows background image to show through multiple elements
+- Popper.js - Add poppers to page
+- Premonish - Predict user action based on mouse movement (can be used for pre-animating elements prior to user interaction)
+- Slick.js - Carousels
+- TaffyDB - Useful for database and data-heavy applications
+- Tween.js - Add tweens and animations
+- Three.js - 3D animation
+- QUnit - A Javascript Unit Testing Framework
+- APIs
+- API to send text
+- animate S on login screen (After Effects & Animate.css)
