@@ -117,6 +117,7 @@ COMMENTS can be removed by the OWNER of the recipe only.
       <!-- (page - view recipe) -->
   ☐ Automatically Updating Home Feed (similar to a social network)
       <!-- (page - home) -->
+  ☐ Allow User to Pick an "Avatar" When Signing Up - Present Selections During Signup
 
 ## PRESENTATION - REQUIRED
 
