@@ -75,12 +75,14 @@ COMMENTS can be removed by the OWNER of the recipe only.
 
 ## BUILD 
 
-  ☐ Server / Connection
-  ☐ Passport & Auth
-  ☐ Pages
-  ☐ Components
-  ☐ App JS & CSS
-  ☐ Styling
+  ☐ Server / Connection / Database - Ahmed
+  ☐ Passport & Auth - Copy Over
+  ☐ Pages - Natalie & Lars
+  ☐ Components - Natalie & Lars
+  ☐ App JS & CSS - 
+  ☐ Routes - 
+  ☐ Libraries - Ahmed
+  ☐ Styling - All Members 
     
 ## FUNCTIONALITY - REQUIRED
 
@@ -91,7 +93,7 @@ COMMENTS can be removed by the OWNER of the recipe only.
       ☐ Logout (function)
   ☐ Dropdown (all with vector icons)
       ☐ User Profile (page)
-      ☐ Bookmarked Recipes (page)
+      ☐ Favorite Recipes (page)
       ☐ Settings (page)
       ☐ Contact (page)
       ☐ Help (page)
@@ -104,9 +106,9 @@ COMMENTS can be removed by the OWNER of the recipe only.
   ☐ User Connections (friending / following)
   ☐ Public / Private Recipe Option (with vector icon)
   ☐ Like / Favorite Recipe Option
-  ☐ Bookmark Option & Bookmarked Recipes Page
+  ☐ Favorite Option & Favorite Recipes Page
   ☐ Comment on Recipes Feature
-  ☐ Share Recipe Feature - 
+  ☐ Share Recipe Feature
       ☐ Send Via Email/SMS
       ☐ Copy Link to CB
       ☐ Print Recipe
@@ -115,7 +117,7 @@ COMMENTS can be removed by the OWNER of the recipe only.
 
 ## PRESENTATION - REQUIRED
 
-  ☐ PowerPoint
+  ☐ PowerPoint - Natalie
   ☐ Run-Through
 
 ## VECTOR ICONS - OPTIONAL
