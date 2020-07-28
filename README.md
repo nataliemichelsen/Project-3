@@ -17,7 +17,7 @@
 
 This is a functional recipe index that works similarly to a social network. 
 
-Examples of similar applications would include AllRecipes, Yummly, and Paprika. 
+Examples of similar applications would include AllRecipes, Yummly, and Tasty. 
 
 ## 💡 **Assignment Instructions**
 
@@ -84,8 +84,11 @@ MIT License. See LICENSE file for more information.
 
 ## 💬 **Contributors**
 
-
-
+1. Natalie Michelsen [@nataliemichelsen](https://github.com/nataliemichelsen)
+2. Ahmed Jalal [@ahmedjalal93](https://github.com/ahmedjalal93)
+3. Tyson Hintze [@hintzetyson](https://github.com/hintzetyson)
+4. Lars Tyrgstad [@ltrygst](https://github.com/ltrygst)
+ 
 ## 🔒 **Installation**
 
 PLEASE DO NOT CLONE THIS REPO. 
