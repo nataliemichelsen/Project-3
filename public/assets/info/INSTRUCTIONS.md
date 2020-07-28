@@ -51,7 +51,7 @@ COMMENTS can be removed by the OWNER of the recipe only.
   ☐ Use ReactJS
   ☐ Have real-world functionality or value
   ☐ Use Node and Express Web Server
-  ☐ Backed by MySQL or MongoDB Database with a Sequelize or Mongoose ORM
+  ☐ Backed by MySQL Database with a Sequelize
   ☐ Use both GET and POST routes for retrieving and adding new data
   ☐ Be deployed using Heroku with data
   ☐ Utilize three libraries / packages / technologies not discuss in class
@@ -73,50 +73,44 @@ COMMENTS can be removed by the OWNER of the recipe only.
   ☐ Google Authenticator
   ☐ Login / Logout
 
+## BUILD 
+
+  ☐ Server / Connection
+  ☐ Passport & Auth
+  ☐ Pages
+  ☐ Components
+  ☐ App JS & CSS
+  ☐ Styling
+    
 ## FUNCTIONALITY - REQUIRED
 
   ☐ NavBar (all with vector icons)
-      ☐ + Add New Recipe
-      ☐ Search 
-      ☐ Home 
-      ☐ Logout 
+      ☐ + Add New Recipe (page)
+      ☐ Search (page)
+      ☐ Home (page)
+      ☐ Logout (function)
   ☐ Dropdown (all with vector icons)
-      ☐ User Profile 
-      ☐ Bookmarked Recipes
-      ☐ Settings
-      ☐ Contact
-      ☐ Help
-  ☐ + Add New Recipe 
-      <!-- (page - add recipe) -->
-  ☐ Edit Existing Recipe  
-      <!-- (page - edit recipe) -->
-  ☐ Delete Existing Recipe  
-      <!-- (page - edit recipe) -->
-  ☐ View All Recipes 
-      <!-- (page - home) -->
-  ☐ Search Bar & Results
-      <!-- (page - search recipes) -->
+      ☐ User Profile (page)
+      ☐ Bookmarked Recipes (page)
+      ☐ Settings (page)
+      ☐ Contact (page)
+      ☐ Help (page)
+  ☐ Edit Existing Recipe  (function)
+  ☐ Delete Existing Recipe  (function)
 
 ## FUNCTIONALITY - OPTIONAL
 
   ☐ Insert vector icons where necessary (see list below)
   ☐ User Connections (friending / following)
-      <!-- (page - my connections) -->
   ☐ Public / Private Recipe Option (with vector icon)
-      <!-- (page - edit recipe) -->
   ☐ Like / Favorite Recipe Option
-      <!-- (page - view recipe) -->
   ☐ Bookmark Option & Bookmarked Recipes Page
-      <!-- (page - bookmarked recipes) -->
   ☐ Comment on Recipes Feature
-      <!-- (page - view recipe) -->
   ☐ Share Recipe Feature - 
       ☐ Send Via Email/SMS
       ☐ Copy Link to CB
       ☐ Print Recipe
-      <!-- (page - view recipe) -->
   ☐ Automatically Updating Home Feed (similar to a social network)
-      <!-- (page - home) -->
   ☐ Allow User to Pick an "Avatar" When Signing Up - Present Selections During Signup
 
 ## PRESENTATION - REQUIRED
