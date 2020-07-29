@@ -7,6 +7,7 @@ function Footer() {
     return (
         <div className="footer">
             <p>© Recipe Index 2020</p>
+            <p>Contact: </p>
         </div>
     )
 }

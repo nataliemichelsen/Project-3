@@ -3,6 +3,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 // nav function 
+// must still add svg files "xmlns" for vector art
+// double check "to" links
 function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #333333">
@@ -14,40 +16,37 @@ function Nav() {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul id="items" className="nav navbar-nav navbar-right">
-                    <li className="nav-item1">
-                        <Link className="nav-link" to="About" style="color: #333333;">Home</Link>
+                    <li className="navbar">
+                        <Link className="nav-link" to="Home" style="color: #333333;">Home</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
                             <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                         </svg>
                     </li>
-                    <li className="nav-item1">
-                        <Link className="nav-link" to="Portfolio" style="color: #333333;">Add Recipe</Link>
+                    <li className="navbar">
+                        <Link className="nav-link" to="Add-Recipe" style="color: #333333;">Add Recipe</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
                             <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                         </svg>
                     </li>
-                    <li className="nav-item1">
-                        <Link className="nav-link" to="Portfolio" style="color: #333333;">Search Recipes</Link>
+                    <li className="navbar">
+                        <Link className="nav-link" to="Search-Recipes" style="color: #333333;">Search Recipes</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
                             <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                         </svg>
                     </li>
-                    <li className="nav-item1">
-                        <Link className="nav-link" to="Collaborations" style="color: #333333;">About</Link>
+                    <li className="navbar">
+                        <Link className="nav-link" to="Logout" style="color: #333333;">Logout</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
                             <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                         </svg>
-                    </li>
-                    <li className="nav-item2">
-                        <Link className="nav-link" to="Contact" style="color: #333333;">Contact</Link>
                     </li>
                 </ul>
             </div>
@@ -55,10 +54,9 @@ function Nav() {
                 <Link id="linkButton" className="btn btn-secondary dropdown-toggle" to="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*</Link>
                 <div id="dropdown-bar" className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <Link id="dropdown-items" className="dropdown-item" to="https://github.com/nataliemichelsen">Profile</Link>
-                    <Link id="dropdown-items" className="dropdown-item" to="">Bookmarks</Link>
-                    <Link id="dropdown-items" className="dropdown-item"
-                        to="https://www.linkedin.com/in/natalie-michelsen-8ba1811a2/">Settings</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="">User Profile</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="">Saved Recipes</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="">Settings</Link>
                     <Link id="dropdown-items" className="dropdown-item" to="assets/docs/Natalie-Resume.pdf">Help</Link>
                 </div>
             </div>
