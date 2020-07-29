@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 
 // nav function 
 // must still add svg files "xmlns" for vector art
-// double check "to" links
 function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #333333">
@@ -17,7 +16,7 @@ function Nav() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul id="items" className="nav navbar-nav navbar-right">
                     <li className="navbar">
-                        <Link className="nav-link" to="Home" style="color: #333333;">Home</Link>
+                        <Link className="nav-link" to="home" style="color: #333333;">Home</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
@@ -25,7 +24,7 @@ function Nav() {
                         </svg>
                     </li>
                     <li className="navbar">
-                        <Link className="nav-link" to="Add-Recipe" style="color: #333333;">Add Recipe</Link>
+                        <Link className="nav-link" to="add-recipe" style="color: #333333;">Add Recipe</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
@@ -33,7 +32,7 @@ function Nav() {
                         </svg>
                     </li>
                     <li className="navbar">
-                        <Link className="nav-link" to="Search-Recipes" style="color: #333333;">Search Recipes</Link>
+                        <Link className="nav-link" to="search" style="color: #333333;">Search Recipes</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
@@ -41,7 +40,7 @@ function Nav() {
                         </svg>
                     </li>
                     <li className="navbar">
-                        <Link className="nav-link" to="Logout" style="color: #333333;">Logout</Link>
+                        <Link className="nav-link" to="logout" style="color: #333333;">Logout</Link>
                         <svg id="add" class="nav-btn mx-auto bi bi-plus-square" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="">
                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z" />
                             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z" />
@@ -54,10 +53,10 @@ function Nav() {
                 <Link id="linkButton" className="btn btn-secondary dropdown-toggle" to="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*</Link>
                 <div id="dropdown-bar" className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <Link id="dropdown-items" className="dropdown-item" to="">User Profile</Link>
-                    <Link id="dropdown-items" className="dropdown-item" to="">Saved Recipes</Link>
-                    <Link id="dropdown-items" className="dropdown-item" to="">Settings</Link>
-                    <Link id="dropdown-items" className="dropdown-item" to="assets/docs/Natalie-Resume.pdf">Help</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="profile">User Profile</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="favorites">Saved Recipes</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="settings">Settings</Link>
+                    <Link id="dropdown-items" className="dropdown-item" to="help">Help</Link>
                 </div>
             </div>
         </nav>
