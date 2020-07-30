@@ -52,7 +52,7 @@ module.exports = function(app) {
               req.body.name +
               ", please activate your account",
             html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
-            <a href="https://peaceful-scrubland-88128.herokuapp.com/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
+            <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
           },
           (error, info) => {
             if (error) {
@@ -93,7 +93,7 @@ module.exports = function(app) {
               data.name +
               ", this is your reset password form",
             html: `Hello ${data.name}, <br/> Please click on the link below to reset your password.<br/>
-            <a href="https://peaceful-scrubland-88128.herokuapp.com/reset/${data.id}/${token}">RESET NOW!</a>`
+            <a href="https://localhost:8080/reset/${data.id}/${token}">RESET NOW!</a>`
           },
           (error, info) => {
             if (error) {
