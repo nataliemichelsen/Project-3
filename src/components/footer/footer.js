@@ -7,7 +7,24 @@ function Footer() {
     return (
         <div className="footer">
             <p>© Recipe Index 2020</p>
-            <p>Contact: </p>
+            <p>
+                Contact Us!
+                Phone: (000) 000-0000
+                Email: example@mail.com
+            </p>
+            <p>
+                Contributors:
+                Natalie Michelsen @nataliemichelsen
+                Ahmed Jalal @ahmedjalal93
+                Tyson Hintze @hintzetyson
+                Lars Tyrgstad @ltrygst
+
+                Honorable Mentions:
+                Michael McShinksky (Instructor)
+                Eric Sayer (TA)
+                Guillermo Villalta (TA)
+                Jason Mangin (classmate, contributed to previous version of code) @jollyrgr83
+            </p>
         </div>
     )
 }
