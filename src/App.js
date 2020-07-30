@@ -1,13 +1,12 @@
 // react import
 import React from 'react';
-import Nav from './components/nav/nav'
-import Nav from './components/footer/footer'
-import Nav from './components'
-import Nav from './components'
-import Nav from './components'
-import Nav from './components'
-import Nav from './components'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+// import Nav from './components/nav/nav'
+import Nav from './components/nav/nav';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from "./pages/home";
+import Addrecipe from "./pages/add-recipe";
+import Search from "./pages/search";
+import Logout from "./pages/logout"
 
 // 
 function App() {
@@ -16,10 +15,10 @@ function App() {
       <div>
         <Nav/>
         <Switch>
-          <Route exact path= '/' component= {About}/> 
-          <Route exact path= '/' component= {Portfolio}/> 
-          <Route exact path= '/' component= {Contact}/> 
-          <Route exact path= '/' component= {Collaborations}/> 
+          <Route exact path= '/' component= {Home}/> 
+          <Route exact path= '/addrecipe' component= {Addrecipe}/> 
+          <Route exact path= '/search' component= {Search}/> 
+          <Route exact path= '/logout' component= {Logout}/> 
         </Switch>
       </div>
     </Router>
