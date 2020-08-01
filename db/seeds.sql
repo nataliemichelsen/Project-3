@@ -1,10 +1,10 @@
-Receipe
+Recipe
     id
     name
     author
     date
     category
-    ingridents
+    ingredients 
     steps
     time
     picture
@@ -14,9 +14,8 @@ Comments
     id
     author
     date
-    Comments
-    Receipe ID
-
+    comments
+    recipe id
 
 Users
     id
@@ -31,8 +30,8 @@ Users
 
 Rate 
     id
-    Rate
+    rate
     author
-    Receipe id
+    recipe id
 
 
