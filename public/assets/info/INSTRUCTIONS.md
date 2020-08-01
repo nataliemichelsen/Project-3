@@ -76,11 +76,12 @@ COMMENTS can be removed by the OWNER of the recipe only.
 ## BUILD 
 
   ☐ Server / Connection / Database - Ahmed
-  ☐ Passport & Auth - Copy Over
-  ☐ Pages - Natalie & Lars
+  ✓ Passport & Auth - Copy Over
+  ☐ Pages - Natalie & Lars & Tyson
   ☐ Components - Natalie & Lars
-  ☐ App JS & CSS - 
-  ☐ Routes - 
+  ☐ App JS & CSS- Natalie & Tyson
+  ✓ Routes - Ahmed
+  ✓ Models - Ahmed 
   ☐ Libraries - Ahmed
   ☐ Styling - All Members 
     
@@ -109,9 +110,10 @@ COMMENTS can be removed by the OWNER of the recipe only.
   ☐ Favorite Option & Favorite Recipes Page
   ☐ Comment on Recipes Feature
   ☐ Share Recipe Feature
-      ☐ Send Via Email/SMS
-      ☐ Copy Link to CB
-      ☐ Print Recipe
+      ✓ Send Via Email
+      ☐ Send Via SMS
+      ✓ Copy Link to CB
+      ✓ Print Recipe
   ☐ Automatically Updating Home Feed (similar to a social network)
   ☐ Allow User to Pick an "Avatar" When Signing Up - Present Selections During Signup
 
