@@ -106,14 +106,13 @@ COMMENTS can be removed by the OWNER of the recipe only.
   ☐ Insert vector icons where necessary (see list below)
   ☐ User Connections (friending / following)
   ☐ Public / Private Recipe Option (with vector icon)
-  ☐ Like / Favorite Recipe Option
-  ☐ Favorite Option & Favorite Recipes Page
+  ✓ Favorite Option & Favorite Recipes Page (with vector icon) - see playground.js for code to copy
   ☐ Comment on Recipes Feature
   ☐ Share Recipe Feature
-      ✓ Send Via Email
+      ✓ Send Via Email - see playground.js & playground.html for code to copy
       ☐ Send Via SMS
-      ✓ Copy Link to CB
-      ✓ Print Recipe
+      ✓ Copy Link to CB - see playground.js for code to copy
+      ✓ Print Recipe - see playground.js & playground.html for code to copy
   ☐ Automatically Updating Home Feed (similar to a social network)
   ☐ Allow User to Pick an "Avatar" When Signing Up - Present Selections During Signup
 
