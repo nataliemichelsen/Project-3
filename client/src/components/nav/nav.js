@@ -11,7 +11,7 @@ function Nav() {
       style={{ backgroundColor: "#333333" }}
     >
       <span id="header" className="navbar-brand mb-1 h1">
-        Recipe Index
+        ReciPique
       </span>
       <button
         id="navbarbutton"
