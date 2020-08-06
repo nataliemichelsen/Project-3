@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 function Footer() {
     return (
         <div className="footer">
-            <p>© Recipique 2020</p>
+            <p>© ReciPique 2020</p>
             <p>
                 Contact Us!
                 Phone: (000) 000-0000
