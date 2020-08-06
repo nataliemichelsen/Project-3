@@ -18,7 +18,7 @@ class Login extends React.Component {
     };
   
     handleSubmit(event) {
-      alert('Login to ReciPique');
+      alert('Login to ReciPique.');
       event.preventDefault();
     };
   
