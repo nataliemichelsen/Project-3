@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API from "../../util/API"
 
 class Login extends React.Component {
     constructor(props) {
@@ -9,17 +10,31 @@ class Login extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
     };
 
-    handleChangePhone(event) {
+    handleChangeUsername(event) {
       this.setState({username: event.target.username});
     };
 
-    handleChangePhone(event) {
+    handleChangePassword(event) {
       this.setState({password: event.target.password});
     };
   
     handleSubmit(event) {
       alert('Login to ReciPique.');
       event.preventDefault();
+      API.login({
+        username: this.state.username,
+        password: this.state.password
+      })
+        .then(res => {
+          console.log(res);
+          if(res.info.message === "Login success!"){
+            console.log("redirect")
+          }else{
+            console.log("failed", res)
+          }
+        })
+        .catch(err => console.log(err));
+      }
     };
   
     render() {
