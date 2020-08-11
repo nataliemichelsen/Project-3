@@ -4,8 +4,10 @@ const crypto = require("crypto");
 const emailer = require("../lib/emailer");
 const router = require("express").Router();
 
+console.log("working")
+
 // login route
-router.route("/api/login").post((req, res, next) => {
+router.route("/login").post((req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) {
       return next(err);
@@ -32,19 +34,20 @@ router.route("/api/login").post((req, res, next) => {
 });
 
 // signup route
-router.route("/api/signup").post((req, res) => {
+router.route("/signup").post((req, res) => {
+  console.log("post signup", req.body.picture);
 
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).send('No files were uploaded.');
-  }
-  let picture = req.files.picture;
-  picture.mv('/', function(err) {
-    if (err){
-      return res.status(500).send(err);
-    }
-  });
+  // if (!req.files || Object.keys(req.files).length === 0) {
+  //   return res.status(400).send('No files were uploaded.');
+  // }
+  // let picture = req.files.picture;
+  // picture.mv('/', function(err) {
+  //   if (err){
+  //     return res.status(500).send(err);
+  //   }
+  // });
 
-  console.log("my file", picture);
+  // console.log("my file", picture);
 
   const token = crypto.randomBytes(20).toString("hex");
   db.User.create({
@@ -53,7 +56,7 @@ router.route("/api/signup").post((req, res) => {
     name: req.body.name,
     phone: req.body.phone,
     bio: req.body.bio,
-    picture: picture,
+    picture: req.body.picture,
     active: 0,
     token: token
   })
@@ -91,7 +94,7 @@ router.route("/logout").get((req, res) => {
 });
 
 //reset password
-router.route("/api/reset/send").put((req, res) => {
+router.route("/reset/send").put((req, res) => {
   const token = crypto.randomBytes(20).toString("hex");
   db.User.findOne({ where: { email: req.body.email.trim() } })
     .then(data => {
@@ -127,7 +130,7 @@ router.route("/api/reset/send").put((req, res) => {
     });
 });
 
-router.route("/api/reset/password").put((req, res) => {
+router.route("/reset/password").put((req, res) => {
   db.User.findOne({ where: { id: Number(req.body.id) } })
     .then(data => {
       if (req.body.token === data.token) {
