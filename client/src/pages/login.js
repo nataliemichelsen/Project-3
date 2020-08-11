@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../../util/API"
+import API from "../util/API"
 
 class Login extends React.Component {
     constructor(props) {

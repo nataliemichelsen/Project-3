@@ -5,6 +5,7 @@ import React from 'react';
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Addrecipe, About, Contact, Editrecipe, Favorites, Help, Home, Logout, Profile, Search, Settings, Viewrecipe } from "./pages/index"
+import Signup from './pages/signup';
 
 // import Addrecipe from "./pages/add-recipe"
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route exact path= '/contact' component= {Contact}/>
           <Route exact path= '/editrecipe' component= {Editrecipe}/>
           <Route exact path= '/viewrecipe' component= {Viewrecipe}/>
+          <Route exact path= '/signup' component= {Signup}/>
         </Switch>
       </div>
     </Router>
