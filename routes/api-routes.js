@@ -61,26 +61,27 @@ router.route("/signup").post((req, res) => {
     token: token
   })
     .then(data => {
-      emailer.sendMail(
-        {
-          from: "Recipe Index",
-          to: req.body.email,
-          subject:
-            "Thank you for signing up " +
-            req.body.name +
-            ", please activate your account",
-          html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
-          <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
-        },
-        (error, info) => {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log("Email sent: " + info.response);
-          }
-        }
-      );
-      res.redirect(307, "/api/login");
+      // emailer.sendMail(
+      //   {
+      //     from: "Recipe Index",
+      //     to: req.body.email,
+      //     subject:
+      //       "Thank you for signing up " +
+      //       req.body.name +
+      //       ", please activate your account",
+      //     html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
+      //     <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
+      //   },
+      //   (error, info) => {
+      //     if (error) {
+      //       console.log(error);
+      //     } else {
+      //       console.log("Email sent: " + info.response);
+      //     }
+      //   }
+      // );
+      // res.redirect(307, "/login");
+      console.log(data)
     })
     .catch(err => {
       res.status(401).json(err);
