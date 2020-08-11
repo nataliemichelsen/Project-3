@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API from "../util/API"
 
 class Signup extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class Signup extends React.Component {
       this.handleChangePassword = this.handleChangePassword.bind(this);
       this.handleChangePhone = this.handleChangePhone.bind(this);
       this.handleChangeBio = this.handleChangeBio.bind(this);
-      this.handleChangePicture = this.handleChangePicture.bind(this);
+      // this.handleChangePicture = this.handleChangePicture.bind(this);
 
       this.handleSubmit = this.handleSubmit.bind(this);
     };
@@ -60,30 +61,29 @@ class Signup extends React.Component {
         })
         .catch(err => console.log(err));
       }
-    };
   
     render() {
       return (
         <form onSubmit={this.handleSubmit} encType="multipart/form-data">
           <label>
             Name:
-            <input type="text" value={this.state.email} onChange={this.handleChangeEmail} />
+            <input type="text" value={this.state.name} onChange={this.handleChangeName} />
           </label>
           <label>
             Email:
             <input type="text" value={this.state.email} onChange={this.handleChangeEmail} />
           </label>
           <label>
+            Password:
+            <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
+          </label>
+          <label>
             Phone:
             <input type="text" value={this.state.phone} onChange={this.handleChangePhone} />
           </label>
           <label>
-            Username:
+            About you:
             <input type="text" value={this.state.username} onChange={this.handleChangeUsername} />
-          </label>
-          <label>
-            Password:
-            <input type="text" value={this.state.password} onChange={this.handleChangePassword} />
           </label>
           <label>
             Picture:
@@ -93,7 +93,6 @@ class Signup extends React.Component {
         </form>
       );
     };
-  
-    }
+  }
 
 export default Signup;
