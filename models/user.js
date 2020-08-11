@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     picture: {
-        type :DataTypes.STRING
+      type :DataTypes.STRING
     },
     active: {
       type: DataTypes.BOOLEAN,

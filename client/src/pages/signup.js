@@ -4,7 +4,7 @@ import API from "../util/API"
 class Signup extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {name: '', email: '', password: '', phone: '', bio: '', picture: ''}
+      this.state = {name: '', email: '', password: '', phone: '', bio: '', picture: 'https://via.placeholder.com/150'}
       this.handleChangeName = this.handleChangeName.bind(this);
       this.handleChangeEmail = this.handleChangeEmail.bind(this);
       this.handleChangePassword = this.handleChangePassword.bind(this);
@@ -16,48 +16,53 @@ class Signup extends React.Component {
     };
   
     handleChangeName(event) {
-      this.setState({name: event.target.name});
+      console.log(event.target.value)
+      this.setState({name: event.target.value});
     };
   
     handleChangeEmail(event) {
-      this.setState({email: event.target.email});
+      this.setState({email: event.target.value});
     };
 
     handleChangePassword(event) {
-      this.setState({password: event.target.password});
+      this.setState({password: event.target.value});
     };
   
     handleChangePhone(event) {
-      this.setState({phone: event.target.phone});
+      this.setState({phone: event.target.value});
     };
 
     handleChangeBio(event) {
-      this.setState({bio: event.target.bio});
+      this.setState({bio: event.target.value});
     };
 
     // handleChangePicture(event) {
-    //   this.setState({picture: event.target.picture});
+    //   console.log("picture", event.target)
+    //   this.setState({picture: event.target.value});
     // };
   
     handleSubmit(event) {
       alert('Thank you for signing up with ReciPique.');
       event.preventDefault();
       console.log("my targets", event.target);
+
+
+      const {name, value} = event.target;
+      console.log("name" + this.state.picture + " val " + value)
+
+
+
+
       API.signup({
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
         phone: this.state.phone,
         bio: this.state.bio,
-        picture: event.target.picture
+        picture: this.state.picture
       })
         .then(res => {
           console.log(res);
-          if(res.info.message === "Login success!"){
-            console.log("redirect")
-          }else{
-            console.log("failed", res)
-          }
         })
         .catch(err => console.log(err));
       }
@@ -83,12 +88,12 @@ class Signup extends React.Component {
           </label>
           <label>
             About you:
-            <input type="text" value={this.state.username} onChange={this.handleChangeUsername} />
+            <input type="text" value={this.state.bio} onChange={this.handleChangeBio} />
           </label>
-          <label>
+          {/* <label>
             Picture:
-            <input type="file" name="picture" />
-          </label>
+            <input type="file" name="picture" onChange={this.handleChangePicture} />
+          </label> */}
           <input type="submit" value="Submit" />
         </form>
       );
