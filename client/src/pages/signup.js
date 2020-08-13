@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API from "../util/API"
+import "./pages.css";
 
 class Signup extends React.Component {
     constructor(props) {
