@@ -6,8 +6,10 @@ import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Addrecipe, About, Contact, Editrecipe, Favorites, Help, Home, Logout, Profile, Search, Settings, Viewrecipe } from "./pages/index"
 import Signup from './pages/signup';
+import Activate from './pages/activate';
 
 // import Addrecipe from "./pages/add-recipe"
+
 function App() {
   return (
     <Router>
@@ -27,6 +29,7 @@ function App() {
           <Route exact path= '/editrecipe' component= {Editrecipe}/>
           <Route exact path= '/viewrecipe' component= {Viewrecipe}/>
           <Route exact path= '/signup' component= {Signup}/>
+          <Route exact path= '/activate/:id?/:token?' component= {Activate}/>
         </Switch>
       </div>
     </Router>

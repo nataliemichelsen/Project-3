@@ -18,8 +18,6 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-
-
 // Start the API server
 db.sequelize.sync({}).then(() => {
   app.listen(PORT, function() {

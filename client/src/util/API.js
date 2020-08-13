@@ -10,6 +10,14 @@ export default {
     console.log("sign up data ", data)
     return axios.post("/api/signup", data);
   },
+
+  activate: function(){
+    const queryString = window.location.href;
+    const id = queryString.split("/")[4];
+    const token = queryString.split("/")[5];
+    console.log("id " + id + " token " + token)
+    return axios.get("/api/activate/" + id + "/" + token)
+  },
   
   resetStart: function(data) {
     return axios.put("/api/reset/send" + data);
