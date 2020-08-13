@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
   login: function(data) {
-    
-    return axios.post("/api/login" + data)
+    console.log("Login data ", data)
+    return axios.post("/api/login", data)
   },
 
   signup: function(data) {
