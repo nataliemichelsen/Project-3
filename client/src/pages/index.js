@@ -10,6 +10,7 @@ import Addrecipe from "./add-recipe.js";
 import Search from "./search.js";
 import Logout from "./logout";
 import Profile from "./profile";
+import "./pages.css";
 
 export {
     About,

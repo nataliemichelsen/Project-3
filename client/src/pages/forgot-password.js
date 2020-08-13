@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./pages.css";
 
 class Forgotpassword extends React.Component {
     constructor(props) {

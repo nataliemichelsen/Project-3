@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./pages.css";
 
 function Editrecipe() {
   return (
