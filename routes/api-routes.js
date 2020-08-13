@@ -9,6 +9,7 @@ console.log("working")
 
 // login route
 router.route("/login").post((req, res, next) => {
+  console.log("user data req", req.body)
   passport.authenticate("local", (err, user, info) => {
     if (err) {
       return next(err);
