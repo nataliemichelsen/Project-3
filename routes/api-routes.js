@@ -2,6 +2,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 const crypto = require("crypto");
 const emailer = require("../lib/emailer");
+const { response } = require("express");
 const router = require("express").Router();
 
 console.log("working")
@@ -61,27 +62,26 @@ router.route("/signup").post((req, res) => {
     token: token
   })
     .then(data => {
-      // emailer.sendMail(
-      //   {
-      //     from: "Recipe Index",
-      //     to: req.body.email,
-      //     subject:
-      //       "Thank you for signing up " +
-      //       req.body.name +
-      //       ", please activate your account",
-      //     html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
-      //     <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
-      //   },
-      //   (error, info) => {
-      //     if (error) {
-      //       console.log(error);
-      //     } else {
-      //       console.log("Email sent: " + info.response);
-      //     }
-      //   }
-      // );
-      // res.redirect(307, "/login");
-      console.log(data)
+      emailer.sendMail(
+        {
+          from: "Recipe Index",
+          to: req.body.email,
+          subject:
+            "Thank you for signing up " +
+            req.body.name +
+            ", please activate your account",
+          html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
+          <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
+        },
+        (error, info) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log("Email sent: " + info.response);
+          }
+        }
+      );
+      res.redirect(307, "/login");
     })
     .catch(err => {
       res.status(401).json(err);
@@ -150,6 +150,32 @@ router.route("/reset/password").put((req, res) => {
       console.log(err);
       res.status(401).json(err);
     });
+});
+
+router.route("/activate/:id/:token").get((req, res) => {
+  db.User.findOne({ where: { id: Number(req.params.id) } }).then(data => {
+    const response = {};
+    if (data !== null) {
+      if (req.params.token === data.token) {
+        db.User.update(
+          {
+            active: 1,
+            token: null
+          },
+          { where: { id: data.id } }
+        );
+        response.code = 1;
+        response.message = "Your account was successfuly activated";
+      } else {
+        response.code = 0;
+        response.message = "Something went wrong while activating your account, please check your link";
+      }
+    } else {
+      response.code = 0;
+      response.message = "Something went wrong while activating your account, please check your link";
+    }
+    return res.json(response);
+  });
 });
 
 module.exports = router;
