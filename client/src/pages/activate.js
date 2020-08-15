@@ -10,7 +10,7 @@ function Activate() {
         })
       )
       .catch((err) => console.log(err));
-    }
+    
       
     return (
         <div className="activate-page">
