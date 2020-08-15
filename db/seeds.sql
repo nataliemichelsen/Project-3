@@ -5,9 +5,9 @@ Recipe
     date
     category
     ingredients 
-    steps
+    instructions
     time
-    picture
+    image
     visibilty(pri/pub)
 
 Comments
