@@ -94,7 +94,7 @@ router.route("/signup").post((req, res) => {
 // logout route
 router.route("/logout").get((req, res) => {
   req.logout();
-  res.redirect("/");
+  res.json(true)
 });
 
 //reset password

@@ -6,6 +6,10 @@ export default {
     return axios.post("/api/login", data)
   },
 
+  logout: function() {
+    return axios.get("/api/logout")
+  },
+
   signup: function(data) {
     console.log("sign up data ", data)
     return axios.post("/api/signup", data);
