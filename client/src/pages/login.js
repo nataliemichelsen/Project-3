@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from 'react-router-dom'
+import { Redirect, useHistory } from 'react-router-dom'
 import API from "../util/API"
 import "./pages.css";
 
@@ -16,7 +16,9 @@ class Login extends React.Component {
     API.authenticate()
       .then(res => {
         console.log(res.data);
-        this.setState({loggedIn: res.data});
+        if(res.data === true){
+          this.props.history.push("/");
+        }
       })
       .catch(err => console.log(err));
   };
@@ -30,7 +32,6 @@ class Login extends React.Component {
   };
 
   handleSubmit(event) {
-    alert('Login to ReciPique.');
     event.preventDefault();
     API.login({
       email:this.state.email,
@@ -40,17 +41,14 @@ class Login extends React.Component {
         console.log(res);
         console.log("login success " + res.data.success + " loggedIn " + this.state.loggedIn)
         this.setState({loggedIn: res.data.success});
+        if(this.state.loggedIn){
+          this.props.history.push("/");
+        }
       })
       .catch(err => console.log(err));
     }
 
   render() {
-    console.log("logged in", this.state.loggedIn)
-    if(this.state.loggedIn) { //this is how I tried to redirect
-      return ( //
-          <Redirect to='/' />
-      );
-    }
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
