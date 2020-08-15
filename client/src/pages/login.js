@@ -6,7 +6,7 @@ import "./pages.css";
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '', loggedId: false}
+    this.state = {email: '', password: '', loggedIn: false}
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePassword = this.handleChangePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +16,7 @@ class Login extends React.Component {
     API.authenticate()
       .then(res => {
         console.log(res.data);
-        this.setState({loggedId: res.data});
+        this.setState({loggedIn: res.data});
       })
       .catch(err => console.log(err));
   };
@@ -38,14 +38,15 @@ class Login extends React.Component {
     })
       .then(res => {
         console.log(res);
-        this.setState({loggedId: true});
+        console.log("login success " + res.data.success + " loggedIn " + this.state.loggedIn)
+        this.setState({loggedIn: res.data.success});
       })
       .catch(err => console.log(err));
     }
 
   render() {
-    console.log("logged in", this.state.loggedId)
-    if(this.state.loggedId) { //this is how I tried to redirect
+    console.log("logged in", this.state.loggedIn)
+    if(this.state.loggedIn) { //this is how I tried to redirect
       return ( //
           <Redirect to='/' />
       );
@@ -61,7 +62,6 @@ class Login extends React.Component {
           <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
         </label>
         <input type="submit" value="Submit" />
-        <h3>hello {this.state.loggedId}</h3>
       </form>
     );
   };
