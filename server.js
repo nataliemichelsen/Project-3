@@ -1,12 +1,12 @@
 const express = require("express");
-const session = require("express-session");
+const session = require('cookie-session')
 // passport configuration
 const passport = require("./config/passport");
 
 const routes = require("./routes");
 const fileUpload = require('express-fileupload');
-const bodyParser = require("body-parser");
-const cookieParser = require('cookie-parser')
+// const bodyParser = require("body-parser");
+// const cookieParser = require('cookie-parser')
 const app = express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
@@ -16,19 +16,29 @@ app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // using sessions to keep track of our user's login status
+app.set('trust proxy', 1)
 app.use(
   session({ 
     secret: "keyboard cat", 
+    name: 'session',
     resave: false, 
-    saveUninitialized: true, 
-    cookie : { httpOnly: true, maxAge: 2419200000 }
+    saveUninitialized: true,
+    keys: ['key1', 'key2'], 
+    cookie: {
+      secure: true,
+      httpOnly: true,
+      // domain: 'example.com',
+      // path: '/',
+      expires: 1000,
+      sameSite: true
+    }
   })
 );
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(bodyParser())
-app.use(cookieParser())
+// app.use(bodyParser())
+//app.use(cookieParser())
 // Serve up static assets (usually on heroku)
 
 

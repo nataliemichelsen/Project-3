@@ -3,6 +3,7 @@ const passport = require("../config/passport");
 const crypto = require("crypto");
 const emailer = require("../lib/emailer");
 const { response } = require("express");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 const router = require("express").Router();
 
 console.log("working")
@@ -27,6 +28,7 @@ router.route("/login").post((req, res, next) => {
         });
       });
     } else {
+      console.log("my user", req.user)
       return res.json({
         message: info.message,
         success: false
@@ -178,5 +180,13 @@ router.route("/activate/:id/:token").get((req, res) => {
     return res.json(response);
   });
 });
+
+router.route("/authenticate").get((req, res) => {
+  if (req.user) {
+    return res.json(true)
+  }
+  return res.json(false)
+})
+
 
 module.exports = router;

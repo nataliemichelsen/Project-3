@@ -18,6 +18,10 @@ export default {
     console.log("id " + id + " token " + token)
     return axios.get("/api/activate/" + id + "/" + token)
   },
+
+  authenticate: function(){
+    return axios.get("/api/authenticate");
+  },
   
   resetStart: function(data) {
     return axios.put("/api/reset/send" + data);
