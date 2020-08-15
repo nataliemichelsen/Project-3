@@ -1,95 +1,149 @@
-/* pages styling */
+/* home.js */
 .home-header {
 }
-
 .home-info {
 
 }
 
+/* add.js */
 .add-header {
     
 }
-
 .add-info {
 
 }
 
+/* search.js */
 .search-header {
 
 }
-
 .search-button {
 
 }
 
+/* view-recipe.js */
 .view-header {
-
 }
-
 .view-info {
 
 }
 
+/* edit-recipe.js */
 .edit-header {
 
 }
-
 .edit-info {
 
 }
 
+/* profile.js */
 .profile-header {
 
 }
-
 .profile-info {
 
 }
 
+/* contact.js */
 .contact-header {
 
 }
-
 .contact-info {
 
 }
 
+/* about.js */
 .about-header {
 
 }
-
 .about-info {
 
 }
 
+/* settings.js */
 .settings-header {
 
 }
-
 .settings-info {
 
 }
 
+/* favorites.js */
 .favorites-header {
 
 }
-
 .favorites-info {
 
 }
 
+/* help.js */
 .help-header {
 
 }
-
 .help-info {
 
 }
 
+/* logout.js */
 .logout-header {
 
 }
-
 .logout-info {
+
+}
+
+/* signup.js */
+.signup-header {
+
+}
+.signup-info {
+
+}
+
+/* activate.js */
+.activate-header {
+
+}
+.activate-info {
+
+}
+
+/* logout.js */
+.logout-header {
+
+}
+.logout-info {
+
+}
+
+/* login.js */
+.login-header {
+
+}
+.login-info {
+
+}
+
+/* activate.js */
+.activate-header {
+
+}
+.activate-info {
+
+}
+
+/* forgot-password.js */
+.forgot-password-header {
+
+}
+.forgot-password-info {
+
+}
+
+/* index.js */
+.index-header {
+
+}
+.index-info {
 
 }
