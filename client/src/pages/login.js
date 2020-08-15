@@ -38,18 +38,18 @@ class Login extends React.Component {
     })
       .then(res => {
         console.log(res);
-        this.setState({loggedId: res.success});
+        this.setState({loggedId: true});
       })
       .catch(err => console.log(err));
     }
 
   render() {
-    console.log(this.state.loggedId)
+    console.log("logged in", this.state.loggedId)
     if(this.state.loggedId) { //this is how I tried to redirect
       return ( //
           <Redirect to='/' />
       );
-  }
+    }
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
