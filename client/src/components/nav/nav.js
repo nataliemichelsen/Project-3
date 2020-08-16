@@ -57,7 +57,7 @@ function Nav() {
           <li className="navbar">
             <Link
               className="nav-link"
-              to="/add-recipe"
+              to="/addrecipe"
               style={{ color: "#333333" }}
             >
               Add Recipe
@@ -159,7 +159,7 @@ function Nav() {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          *
+          🔽
         </Link>
         <div
           id="dropdown-bar"
