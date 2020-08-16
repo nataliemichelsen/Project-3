@@ -6,7 +6,7 @@ import Help from "./help"
 import Settings from "./settings"
 import Viewrecipe from "./search"
 import Home from "./home";
-import Addrecipe from "./add-recipe.js";
+import AddRecipe from "./add-recipe.js";
 import Search from "./search.js";
 import Logout from "./logout";
 import Profile from "./profile";
@@ -21,7 +21,7 @@ export {
     Settings,
     Viewrecipe,
     Home,
-    Addrecipe,
+    AddRecipe,
     Search,
     Logout,
     Profile

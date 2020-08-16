@@ -28,10 +28,14 @@ export default {
   },
   
   resetStart: function(data) {
-    return axios.put("/api/reset/send" + data);
+    return axios.put("/api/reset/send", data);
   },
   
   resetPassword: function(data) {
-    return axios.put("/api/reset/password" + data);
+    return axios.put("/api/reset/password", data);
+  },
+
+  addRecipe: function(data){
+    return axios.post("/api/addrecipe", data)
   }
 };

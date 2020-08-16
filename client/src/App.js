@@ -4,7 +4,7 @@ import React from 'react';
 // import Nav from './components/nav/nav'
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Addrecipe, About, Contact, Editrecipe, Favorites, Help, Home, Logout, Profile, Search, Settings, Viewrecipe } from "./pages/index"
+import { AddRecipe, About, Contact, Editrecipe, Favorites, Help, Home, Logout, Profile, Search, Settings, Viewrecipe } from "./pages/index"
 import Signup from './pages/signup';
 import Activate from './pages/activate';
 import Login from './pages/login';
@@ -18,7 +18,7 @@ function App() {
         <Nav/>
         <Switch>
           <Route exact path= '/' component= {Home}/> 
-          <Route exact path= '/addrecipe' component= {Addrecipe}/> 
+          <Route exact path= '/addrecipe' component= {AddRecipe}/> 
           <Route exact path= '/search' component= {Search}/> 
           <Route exact path= '/logout' component= {Logout}/> 
           <Route exact path= '/profile' component= {Profile}/> 
