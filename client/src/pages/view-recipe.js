@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import "./pages.css";
 
+class Viewrecipe extends Component {
+  state = {
+    results: [],
+    sorted: false,
+    search: "",
+  };
+
+  componentDidMount() {
+    API.list()
+      .then((res) =>
+        this.setState({
+          result: res.data.results,
+          users: res.data.results,
+        })
+      )
+      .catch((err) => console.log(err));
+
 function Viewrecipe() {
   return (
     <>
@@ -17,10 +34,10 @@ function Viewrecipe() {
             alt={`${props.recipeName}`} />
           <div className="view-recipe-actions">
             {/* add vector images for sms, email, & print - see ready file in slack chat */}
-            <p className="view-recipe-favorites" alt="Save recipe to Favorites."></p>
-            <p className="view-recipe-share-email" href={`mailto:${props.email}`} alt="Share recipe via email."></p>
-            <p className="view-recipe-share-sms" alt="Share recipe via SMS."></p>
-            <p className="view-recipe-share-print" alt="Print recipe."></p>
+            <button className="view-recipe-favorites" alt="Save recipe to Favorites."></button>
+            <button className="view-recipe-share-email" href={`mailto:${props.email}`} alt="Share recipe via email."></button>
+            <button className="view-recipe-share-sms" alt="Share recipe via SMS."></button>
+            <button className="view-recipe-share-print" alt="Print recipe."></button>
           </div>
           <p className="view-recipe-details text">
             {props.author}
@@ -47,6 +64,22 @@ function Viewrecipe() {
   );
 }
 
+function addFavorite(recipeId) {
+  
+}
+
+function shareEmail() {
+  
+}
+
+function shareSMS() {
+  
+}
+
+function printRecipe() {
+  window.print()
+}
+
 // bookmark recipe code
 function bookmark(title,url){
 
@@ -68,11 +101,6 @@ function bookmark(title,url){
   } else if(document.all)
   window.external.AddFavorite(url, title);
 }
-
-// print current window code
-function print_current_page() {
-  window.print()
-}
-
+  }
 
 export default Viewrecipe;
