@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark bg-dark"
+      className="navbar navbar-expand-lg navbar-light bg-light"
       style={{ backgroundColor: "#333333" }}
     >
       <span id="header" className="navbar-brand mb-1 h1">
@@ -57,7 +57,7 @@ function Nav() {
           <li className="navbar">
             <Link
               className="nav-link"
-              to="/add-recipe"
+              to="/addrecipe"
               style={{ color: "#333333" }}
             >
               Add Recipe
@@ -159,7 +159,7 @@ function Nav() {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          *
+          🔽
         </Link>
         <div
           id="dropdown-bar"
