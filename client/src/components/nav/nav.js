@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark bg-dark"
+      className="navbar navbar-expand-lg navbar-light bg-light"
       style={{ backgroundColor: "#333333" }}
     >
       <span id="header" className="navbar-brand mb-1 h1">
