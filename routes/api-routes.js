@@ -3,6 +3,8 @@ const passport = require("../config/passport");
 const crypto = require("crypto");
 const emailer = require("../lib/emailer");
 const router = require("express").Router();
+// const multer = require('multer');
+// const upload = multer({ dest: '../' })
 
 // login route
 router.route("/login").post((req, res, next) => {
@@ -37,17 +39,18 @@ router.route("/login").post((req, res, next) => {
 router.route("/signup").post((req, res) => {
   console.log("post signup", req.files, " body ", req.body);
 
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).json('No files were uploaded.');
-  }
+  // if (!req.files || Object.keys(req.files).length === 0) {
+  //   return res.status(400).json('No files were uploaded.');
+  // }
 
   let picture = req.files.picture;
-  picture.mv('./uploads/' + picture.name, function(err) {
+  picture.mv('.' + picture.name, function(err) {
     if (err){
-      return res.status(500).json(err);
+      //return res.json(err);
+      console.log(err);
     }
   });
-
+  
   const token = crypto.randomBytes(20).toString("hex");
   db.User.create({
     email: req.body.email,
@@ -79,10 +82,10 @@ router.route("/signup").post((req, res) => {
           }
         }
       );
-      res.status(200).json(data);
+      return res.status(200).json(data);
     })
     .catch(err => {
-      res.status(401).json(err);
+      return res.status(401).json(err);
     });
 });
 
