@@ -11,7 +11,7 @@ class Signup extends React.Component {
       this.handleChangePassword = this.handleChangePassword.bind(this);
       this.handleChangePhone = this.handleChangePhone.bind(this);
       this.handleChangeBio = this.handleChangeBio.bind(this);
-      // this.handleChangePicture = this.handleChangePicture.bind(this);
+      this.handleChangePicture = this.handleChangePicture.bind(this);
 
       this.handleSubmit = this.handleSubmit.bind(this);
     };
@@ -37,31 +37,29 @@ class Signup extends React.Component {
       this.setState({bio: event.target.value});
     };
 
-    // handleChangePicture(event) {
-    //   console.log("picture", event.target)
-    //   this.setState({picture: event.target.value});
-    // };
+    handleChangePicture(event) {
+      console.log("picture", event.target.files[0])
+      this.setState({picture: event.target.files[0]});
+    };
   
     handleSubmit(event) {
       alert('Thank you for signing up with ReciPique.');
       event.preventDefault();
-      console.log("my targets", event.target);
 
 
-      const {name, value} = event.target;
-      console.log("name" + this.state.picture + " val " + value)
+      console.log("picture " + this.state.picture)
 
+      const formData = new FormData(); 
+      formData.append("picture", this.state.picture); 
+      formData.append("name", this.state.name);
+      formData.append("email", this.state.email);
+      formData.append("password", this.state.password);
+      formData.append("phone", this.state.phone);
+      formData.append("bio", this.state.bio);
 
+      console.log("my form data ", formData.getAll("*"))
 
-
-      API.signup({
-        name: this.state.name,
-        email: this.state.email,
-        password: this.state.password,
-        phone: this.state.phone,
-        bio: this.state.bio,
-        picture: this.state.picture
-      })
+      API.signup(formData)
         .then(res => {
           console.log(res);
         })
@@ -91,10 +89,10 @@ class Signup extends React.Component {
             About you:
             <input type="text" value={this.state.bio} onChange={this.handleChangeBio} />
           </label>
-          {/* <label>
+          <label>
             Picture:
             <input type="file" name="picture" onChange={this.handleChangePicture} />
-          </label> */}
+          </label>
           <input type="submit" value="Submit" />
         </form>
       );

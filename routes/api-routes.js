@@ -5,8 +5,13 @@ const emailer = require("../lib/emailer");
 const { response } = require("express");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 const router = require("express").Router();
+const cloudinary = require('cloudinary').v2;
 
-console.log("working")
+cloudinary.config({ 
+  cloud_name: "ahmedjalal",
+  api_key: "649491879231561",
+  api_secret: "5gmhu2qjYDyFmc2eQirh8veaTZY"
+})
 
 // login route
 router.route("/login").post((req, res, next) => {
@@ -39,19 +44,26 @@ router.route("/login").post((req, res, next) => {
 
 // signup route
 router.route("/signup").post((req, res) => {
-  console.log("post signup", req.body.picture);
+  console.log("post signup", req.files, " body ", req.body);
 
   // if (!req.files || Object.keys(req.files).length === 0) {
   //   return res.status(400).send('No files were uploaded.');
   // }
-  // let picture = req.files.picture;
-  // picture.mv('/', function(err) {
-  //   if (err){
-  //     return res.status(500).send(err);
-  //   }
-  // });
+
+  // const path = req.files
+  // console.log("my file values", path);
+  // cloudinary.uploader.upload(req.files.picture).then(image => res.json("something ")).catch(err => console.log(err));
 
   // console.log("my file", picture);
+
+  let sampleFile = req.files.picture;
+
+  // Use the mv() method to place the file somewhere on your server
+  sampleFile.mv('./uploads/' + sampleFile.name, function(err) {
+    if (err){
+      return res.status(500).json(err);
+    }
+  });
 
   const token = crypto.randomBytes(20).toString("hex");
   db.User.create({
@@ -84,7 +96,7 @@ router.route("/signup").post((req, res) => {
           }
         }
       );
-      res.redirect(307, "/login");
+      res.status(200).json(data);
     })
     .catch(err => {
       res.status(401).json(err);
