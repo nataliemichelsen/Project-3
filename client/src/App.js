@@ -21,7 +21,7 @@ function App() {
           <Route exact path= '/addrecipe' component= {AddRecipe}/> 
           <Route exact path= '/search' component= {Search}/> 
           <Route exact path= '/logout' component= {Logout}/> 
-          <Route exact path= '/profile' component= {Profile}/> 
+          {/* <Route exact path= '/profile' component= {Profile}/>  */}
           <Route exact path= '/favorites' component= {Favorites}/> 
           <Route exact path= '/settings' component= {Settings}/> 
           <Route exact path= '/help' component= {Help}/>
