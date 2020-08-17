@@ -4,14 +4,10 @@ const session = require('cookie-session')
 const passport = require("./config/passport");
 
 const routes = require("./routes");
-const fileUpload = require('express-fileupload');
-// const bodyParser = require("body-parser");
-// const cookieParser = require('cookie-parser')
 const app = express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
-app.use(fileUpload());
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

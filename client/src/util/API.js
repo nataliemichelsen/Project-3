@@ -11,8 +11,13 @@ export default {
   },
 
   signup: function(data) {
+    const config = {
+      headers: {
+          'content-type': 'multipart/form-data'
+      }
+    };
     console.log("sign up data ", data)
-    return axios.post("/api/signup", data);
+    return axios.post("/api/signup", data, config);
   },
 
   activate: function(){
