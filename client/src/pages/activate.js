@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API from "../util/API"
 
 function Activate() {
-    API.list()
+    API.activate()
       .then((res) =>
         this.setState({
           result: res.data.results,
