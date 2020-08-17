@@ -7,7 +7,6 @@ const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
 
-
 cloudinary.config({ 
   cloud_name: 'ahmedjalal', 
   api_key: '649491879231561', 
@@ -180,9 +179,31 @@ router.route("/activate/:id/:token").get((req, res) => {
 
 router.route("/authenticate").get((req, res) => {
   if (req.user) {
-    return res.json(true)
+    return res.json(req.user)
   }
   return res.json(false)
+});
+
+router.route("/profile/:id?").get((req, res) => {
+  db.User.findOne({ where: { id: Number(req.params.id) } }).then(data => {
+    res.json(data);
+  }).catch(err => res.json(err));
+});
+
+router.route("/addrecipe").post(upload, (req, res) => {
+  console.log("add ", req.body, " file ", req.file)
+  db.Recipe.create({
+    name: req.body.name,
+    author: req.body.author,
+    category: req.body.category,
+    ingredients: req.body.ingredients,
+    steps: req.body.steps,
+    time: req.body.time,
+    picture: req.file.path,
+    visility: req.body.visility
+  }).then(data => {
+    res.json(data);
+  });
 })
 
 

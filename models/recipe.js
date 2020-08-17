@@ -4,10 +4,6 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      user: {
-        type: DataTypes.TEXT,
-        allowNull: false
-      },
       author: {
         type: DataTypes.INTEGER
       },
@@ -27,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.STRING
       },
       visility: {
-          type: DataTypes.INTEGER
+          type: DataTypes.BOOLEAN
       }
     });
   

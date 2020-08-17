@@ -1,60 +1,62 @@
-// import React, { useState } from "react";
-// import "./pages.css";
+import React, { useState } from "react";
+import "./pages.css";
+import API from "../util/API";
+import Authenticate from "../util/Authenticate"
+import { data } from "jquery";
 
-// class Profile extends Component {
-//   state = {
-//     results: [],
-//     sorted: false,
-//     search: "",
-//   };
+class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {loading: true}
+      };
 
-//   componentDidMount() {
-//     API.list()
-//       .then((res) =>
-//         this.setState({
-//           result: res.data.results,
-//           users: res.data.results,
-//         })
-//       )
-//       .catch((err) => console.log(err));
+    async componentDidMount() {
+        let auth = await Authenticate();
+        this.setState({id: auth.data.id, loading: false})
+        const queryString = window.location.href;
+        const id = queryString.split("/")[4] || this.state.id;
+        API.getOne("/api/profile/" + id).then((res) => {
+            this.setState({
+                ...res.data
+            });
+        })
+        .catch((err) => console.log(err));
+    }
 
-//       function profilePage(props) {
-//         return (
-//           <>
-//             <div>
-//               <h1 className="profile-header">User Profile</h1>
-//             </div>
-//             <div className="profile-page">
-//               <div className="profile-body">
-//                 <img
-//                   className="profile-image"
-//                   src={props.image}
-//                   alt={`Viewing profile for ${props.firstName} ${props.lastName}.`}
-//                 />
-      
-//                 <p className="profile-name text">
-//                   {props.firstName} {props.lastName}
-//                 </p>
-      
-//       {/* future development - age verification */}
-//                 {/* <p className="profile-dob text">
-//                   Dob:{" "}
-//                   <Moment format="MM/DD/YYYY" className="moment">
-//                     {props.DOB}
-//                   </Moment>
-//                 </p> */}
-      
-//                 <p className="profile-phone text">{props.phone}</p>
-      
-//                 <a className="profile-email" href={`mailto:${props.email}`}>
-//                   {props.email}
-//                 </a>
-//               </div>
-//               <h4 className="profile-info">To make changes to your profile, go to {`Settings`}.</h4>
-//             </div>
-//           </>
-//         );
-//       }
-//   }
+    render() {
+        if(this.state.loading === true){
+            return (<center><h1>Loading...</h1></center>)
+        }
+        return (
+            <div>
+                <div>
+                <h1 className="profile-header">User Profile</h1>
+                </div>
+                <div className="profile-page">
+                <div className="profile-body">
+                    <img
+                    className="profile-image"
+                    src={this.state.picture}
+                    alt={`Viewing profile for ${this.state.name}.`}
+                    width="300"
+                    height="auto"
+                    />
 
-// // export default Profile;
+                    <p className="profile-name text">
+                    {this.state.name}
+                    </p>
+
+                    <p className="profile-phone text">{this.state.phone}</p>
+
+                    <a className="profile-email">
+                    {this.state.email}
+                    </a>
+                </div>
+                <h4 className="profile-info">To make changes to your profile, go to Settings.</h4>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Profile;

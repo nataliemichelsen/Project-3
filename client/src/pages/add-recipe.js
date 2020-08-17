@@ -1,47 +1,33 @@
 import React, { useState } from "react";
 import "./pages.css";
 import API from "../util/API"
+import Authenticate from "../util/Authenticate";
 
 class Addrecipe extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: '', author: '', date: '', category: '', ingredients: '', instructions: '', time: '', visibility: '', recipeId: ''}
+    this.state = {name: '', author: '', category: '', ingredients: '', steps: '', time: '', picture: '', visibility: '', loading: true}
     this.handleChangeName = this.handleChangeName.bind(this);
-    this.handleChangeAuthor = this.handleChangeAuthor.bind(this);
-    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleChangeCategory = this.handleChangeCategory.bind(this);
     this.handleChangeIngredients = this.handleChangeIngredients.bind(this);
-    this.handleChangeInstructions = this.handleChangeInstructions.bind(this);
+    this.handleChangeSteps = this.handleChangeSteps.bind(this);
     this.handleChangeTime = this.handleChangeTime.bind(this);
+    this.handleChangePicture = this.handleChangePicture.bind(this);
     this.handleChangeVisibility = this.handleChangeVisibility.bind(this);
-    this.handleChangeRecipeId = this.handleChangeRecipeId.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  componentDidMount() {
-    API.authenticate()
-      .then(res => {
-        console.log(res.data);
-        if(res.data === true){
-          this.props.history.push("/");
-        }
-      })
-      .catch(err => console.log(err));
+  async componentDidMount() {
+    let auth = await Authenticate();
+    this.setState({author: auth.data.id, loading: false})
   };
 
   handleChangeName(event) {
     this.setState({name: event.target.value});
   };
 
-  handleChangeAuthor(event) {
-    this.setState({author: event.target.value});
-  };
-
-  handleChangeDate(event) {
-    this.setState({date: event.target.value});
-  };
-
   handleChangeCategory(event) {
+    console.log("category", event.target.value)
     this.setState({category: event.target.value});
   };
 
@@ -49,70 +35,89 @@ class Addrecipe extends React.Component {
     this.setState({ingredients: event.target.value});
   };
 
-  handleChangeInstructions(event) {
-    this.setState({instructions: event.target.value});
+  handleChangeSteps(event) {
+    this.setState({steps: event.target.value});
   };
 
   handleChangeTime(event) {
     this.setState({time: event.target.value});
   };
 
+  handleChangePicture(event) {
+    this.setState({picture: event.target.files[0]});
+  };
+
   handleChangeVisibility(event) {
     this.setState({visibility: event.target.value});
   };
 
-  handleChangeRecipeId(event) {
-    this.setState({recipeId: event.target.value});
-  };
-
   handleSubmit(event) {
     event.preventDefault();
-    API.search({
-      email:this.state.add,
-    })
+    const formData = new FormData(); 
+    formData.append("name", this.state.name);
+    formData.append("author", this.state.author);
+    formData.append("category", this.state.category);
+    formData.append("ingredients", this.state.ingredients);
+    formData.append("steps", this.state.steps);
+    formData.append("time", this.state.time);
+    formData.append("picture", this.state.picture);
+    formData.append("visibility", this.state.visibility);
+    
+    API.addRecipe(formData)
       .then(res => {
         console.log(res);
-        this.setState({add: res.data.success});
-        if(this.state.add){
-          this.props.history.push("/");
-        }
       })
       .catch(err => console.log(err));
-    }
+  }
 
 render() {
+  if(this.state.loading === true){
+    return (<center><h1>Loading...</h1></center>)
+  }
   return (
-    <form>
+    <form onSubmit={this.handleSubmit} encType="multipart/form-data">
       <label>
+        Name of the recipe
       <input type="text" value={this.state.name} onChange={this.handleChangeName} />
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.author} onChange={this.handleChangeAuthor} />
+        Category
+      <select onChange={this.handleChangeCategory} defaultValue="1">
+        <option value="1">Dessert</option>
+        <option value="2">Main</option>
+      </select>
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.date} onChange={this.handleChangeDate} />
+        Ingredients
+      <textarea type="text" value={this.state.ingredients} onChange={this.handleChangeIngredients} />
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.category} onChange={this.handleChangeCategory} />
+        Steps
+      <textarea type="text" value={this.state.steps} onChange={this.handleChangeSteps} />
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.ingredients} onChange={this.handleChangeIngredients} />
+        Estimate time (in minutes)
+      <input type="number" value={this.state.time} onChange={this.handleChangeTime} />
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.instructions} onChange={this.handleChangeInstructions} />
+        Recipe visibile?
+      <select onChange={this.handleChangeVisibility} defaultValue="1">
+        <option value="1">True</option>
+        <option value="0">False</option>
+      </select>
       </label>
+      <br/>
       <label>
-      <input type="text" value={this.state.time} onChange={this.handleChangeTime} />
+        Picture:
+        <input type="file" name="picture" onChange={this.handleChangePicture} />
       </label>
-      <label>
-      <input type="text" value={this.state.visibility} onChange={this.handleChangeVisibility} />
-      </label>
-      <label>
-      <input type="text" value={this.state.recipeId} onChange={this.handleChangeRecipeId} />
-      </label>
-      <label>
-      <button className="search-button">Add Recipe</button>
-      </label>
+      <br/>
+      <input type="submit" value="Submit" />
     </form>
   );
 }

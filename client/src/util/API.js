@@ -11,20 +11,13 @@ export default {
   },
 
   signup: function(data) {
-    const config = {
-      headers: {
-          'content-type': 'multipart/form-data'
-      }
-    };
-    console.log("sign up data ", data)
-    return axios.post("/api/signup", data, config);
+    return axios.post("/api/signup", data);
   },
 
   activate: function(){
     const queryString = window.location.href;
     const id = queryString.split("/")[4];
     const token = queryString.split("/")[5];
-    console.log("id " + id + " token " + token)
     return axios.get("/api/activate/" + id + "/" + token)
   },
 
@@ -42,5 +35,9 @@ export default {
 
   addRecipe: function(data){
     return axios.post("/api/addrecipe", data)
+  },
+
+  getOne: function(data){
+    return axios.get(data);
   }
 };

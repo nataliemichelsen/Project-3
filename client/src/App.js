@@ -1,7 +1,5 @@
-// react import
 import React from 'react';
 
-// import Nav from './components/nav/nav'
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AddRecipe, About, Contact, Editrecipe, Favorites, Help, Home, Logout, Profile, Search, Settings, Viewrecipe } from "./pages/index"
@@ -9,7 +7,6 @@ import Signup from './pages/signup';
 import Activate from './pages/activate';
 import Login from './pages/login';
 
-// import Addrecipe from "./pages/add-recipe"
 
 function App() {
   return (
@@ -21,7 +18,7 @@ function App() {
           <Route exact path= '/addrecipe' component= {AddRecipe}/> 
           <Route exact path= '/search' component= {Search}/> 
           <Route exact path= '/logout' component= {Logout}/> 
-          {/* <Route exact path= '/profile' component= {Profile}/>  */}
+          <Route exact path= '/profile/:id?' component= {Profile}/> 
           <Route exact path= '/favorites' component= {Favorites}/> 
           <Route exact path= '/settings' component= {Settings}/> 
           <Route exact path= '/help' component= {Help}/>
