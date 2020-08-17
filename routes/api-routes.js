@@ -3,19 +3,21 @@ const passport = require("../config/passport");
 const crypto = require("crypto");
 const emailer = require("../lib/emailer");
 const router = require("express").Router();
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const multer = require('multer');
 
-var storage = multer.diskStorage({
-  destination: function (request, file, callback) {
-      callback(null, './uploads/');
-  },
-  filename: function (request, file, callback) {
-      console.log(file);
-      callback(null, file.originalname)
-  }
+
+cloudinary.config({ 
+  cloud_name: 'ahmedjalal', 
+  api_key: '649491879231561', 
+  api_secret: '5gmhu2qjYDyFmc2eQirh8veaTZY' 
 });
 
-var upload = multer({ storage: storage }).single("picture");
+var upload = multer({ storage: new CloudinaryStorage({
+    cloudinary: cloudinary
+  })
+}).single("picture");
 
 // login route
 router.route("/login").post((req, res, next) => {
@@ -47,64 +49,43 @@ router.route("/login").post((req, res, next) => {
 });
 
 // signup route
-router.post('/signup', upload, (req, res) => {
-  console.log("post signup", req.files, " body ", req.body);
-
-
-
-  
-
-
-  // if (!req.files || Object.keys(req.files).length === 0) {
-  //   return res.status(400).json('No files were uploaded.');
-  // }
-
-  // let picture = req.files.picture;
-  // picture.mv('.' + picture.name, function(err) {
-  //   if (err){
-  //     //return res.json(err);
-  //     console.log(err);
-  //   }
-  // });
-
-  res.json("success");
-
-  // const token = crypto.randomBytes(20).toString("hex");
-  // db.User.create({
-  //   email: req.body.email,
-  //   password: req.body.password,
-  //   name: req.body.name,
-  //   phone: req.body.phone,
-  //   bio: req.body.bio,
-  //   picture: req.body.picture,
-  //   active: 0,
-  //   token: token
-  // })
-  //   .then(data => {
-  //     emailer.sendMail(
-  //       {
-  //         from: "Recipe Index",
-  //         to: req.body.email,
-  //         subject:
-  //           "Thank you for signing up " +
-  //           req.body.name +
-  //           ", please activate your account",
-  //         html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
-  //         <a href="https://https://localhost:8080/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
-  //       },
-  //       (error, info) => {
-  //         if (error) {
-  //           console.log(error);
-  //         } else {
-  //           console.log("Email sent: " + info.response);
-  //         }
-  //       }
-  //     );
-  //     return res.status(200).json(data);
-  //   })
-  //   .catch(err => {
-  //     return res.status(401).json(err);
-  //   });
+router.route('/signup').post(upload, (req, res) => {
+  const token = crypto.randomBytes(20).toString("hex");
+  db.User.create({
+    email: req.body.email,
+    password: req.body.password,
+    name: req.body.name,
+    phone: req.body.phone,
+    bio: req.body.bio,
+    picture: req.file.path,
+    active: 0,
+    token: token
+  })
+    .then(data => {
+      emailer.sendMail(
+        {
+          from: "Recipe Index",
+          to: req.body.email,
+          subject:
+            "Thank you for signing up " +
+            req.body.name +
+            ", please activate your account",
+          html: `Hello ${req.body.name}, <br/> Please click on the link below to activate your account.<br/>
+          <a href="https://recipique.herokuapp.com/activate/${data.id}/${token}">ACTIVATE NOW!</a>`
+        },
+        (error, info) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log("Email sent: " + info.response);
+          }
+        }
+      );
+      return res.status(200).json(data);
+    })
+    .catch(err => {
+      return res.status(401).json(err);
+    });
 });
 
 // logout route
