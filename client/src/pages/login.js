@@ -50,17 +50,26 @@ class Login extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <div>
+        <br></br>
+      <div className="text-center">
+        <h1 className="login-info text-center">Please Log In</h1>
+      <br></br>
+      <form onSubmit={this.handleSubmit} classname="text-center">
         <label>
           Email:
           <input type="text" value={this.state.email} onChange={this.handleChangeEmail} />
         </label>
+        <br></br>
         <label>
           Password:
           <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
         </label>
+        <br></br>
         <input type="submit" value="Submit" />
       </form>
+      </div>
+      </div>
     );
   };
 }

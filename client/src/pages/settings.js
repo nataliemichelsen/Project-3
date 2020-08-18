@@ -4,8 +4,10 @@ import "./pages.css";
 function Settings() {
   return (
     <div>
-      <h1 className="settings-header">Settings</h1>
-      <h4 className="settings-info">Update any of your user or profile settings here.</h4>
+    <br></br>
+      <h1 className="settings-header text-center">Settings</h1>
+      <br></br>
+      <h4 className="settings-info text-center">Update any of your user or profile settings here.</h4>
     </div>
   );
 }

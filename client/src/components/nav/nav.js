@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light"
+      className="navbar navbar-expand-lg navbar-light bg-info"
       style={{ backgroundColor: "#333333" }}
     >
       <span id="header" className="navbar-brand mb-1 h1">
@@ -31,28 +31,6 @@ function Nav() {
             <Link className="nav-link" to="/" style={{ color: "#333333" }}>
               Home
             </Link>
-            <svg
-              id="add"
-              className="nav-btn mx-auto bi bi-plus-square"
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              xmlns=""
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-              />
-            </svg>
           </li>
           <li className="navbar">
             <Link
@@ -62,28 +40,6 @@ function Nav() {
             >
               Add Recipe
             </Link>
-            <svg
-              id="add"
-              className="nav-btn mx-auto bi bi-plus-square"
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              xmlns=""
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-              />
-            </svg>
           </li>
           <li className="navbar">
             <Link
@@ -93,28 +49,42 @@ function Nav() {
             >
               Search Recipes
             </Link>
-            <svg
-              id="add"
-              className="nav-btn mx-auto bi bi-plus-square"
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              xmlns=""
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
+              to="/favorites"
+              style={{ color: "#333333" }}
             >
-              <path
-                fillRule="evenodd"
-                d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-              />
-            </svg>
+              Favorite Recipes
+            </Link>
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
+              to="/profile"
+              style={{ color: "#333333" }}
+            >
+              Profile
+            </Link>
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
+              to="/settings"
+              style={{ color: "#333333" }}
+            >
+              Settings
+            </Link>
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
+              to="/help"
+              style={{ color: "#333333" }}
+            >
+              Help
+            </Link>
           </li>
           <li className="navbar">
             <Link
@@ -124,61 +94,8 @@ function Nav() {
             >
               Logout
             </Link>
-            <svg
-              id="add"
-              className="nav-btn mx-auto bi bi-plus-square"
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              xmlns=""
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"
-              />
-              <path
-                fillRule="evenodd"
-                d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-              />
-            </svg>
           </li>
         </ul>
-      </div>
-      <div className="dropdown">
-        <Link
-          id="linkButton"
-          className="btn btn-secondary dropdown-toggle"
-          to="#"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          🔽
-        </Link>
-        <div
-          id="dropdown-bar"
-          className="dropdown-menu"
-          aria-labelledby="dropdownMenuLink"
-        >
-          <Link id="dropdown-items" className="dropdown-item" to="/profile">
-            User Profile
-          </Link>
-          <Link id="dropdown-items" className="dropdown-item" to="/favorites">
-            Saved Recipes
-          </Link>
-          <Link id="dropdown-items" className="dropdown-item" to="/settings">
-            Settings
-          </Link>
-          <Link id="dropdown-items" className="dropdown-item" to="/help">
-            Help
-          </Link>
-        </div>
       </div>
     </nav>
   );

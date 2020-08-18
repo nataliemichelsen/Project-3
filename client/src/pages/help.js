@@ -4,8 +4,10 @@ import "./pages.css";
 function Help() {
   return (
     <div>
-      <h1 className="help-header">Help & Info</h1>
-      <h4 className="help-info">View our FAQs, view our index, or contact support.</h4>
+      <br></br>
+      <h1 className="help-header text-center">Help</h1>
+      <br></br>
+      <h4 className="help-info text-center">For assistance, please contact support by e-mailing support@recipique.com</h4>
     </div>
   );
 }
