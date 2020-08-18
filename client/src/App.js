@@ -25,7 +25,7 @@ function App() {
           <Route exact path= '/about' component= {About}/>
           <Route exact path= '/contact' component= {Contact}/>
           <Route exact path= '/editrecipe' component= {Editrecipe}/>
-          <Route exact path= '/viewrecipe' component= {Viewrecipe}/>
+          <Route exact path= '/viewrecipe/:id?' component= {Viewrecipe}/>
           <Route exact path= '/login' component= {Login}/>
           <Route exact path= '/signup' component= {Signup}/>
           <Route exact path= '/activate/:id?/:token?' component= {Activate}/>

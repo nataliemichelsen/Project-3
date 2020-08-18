@@ -4,7 +4,7 @@ import Editrecipe from "./edit-recipe"
 import Favorites from "./favorites"
 import Help from "./help"
 import Settings from "./settings"
-import Viewrecipe from "./search"
+import Viewrecipe from "./view-recipe"
 import Home from "./home";
 import AddRecipe from "./add-recipe.js";
 import Search from "./search.js";

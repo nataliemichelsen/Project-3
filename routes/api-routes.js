@@ -190,6 +190,12 @@ router.route("/profile/:id?").get((req, res) => {
   }).catch(err => res.json(err));
 });
 
+router.route("/viewrecipe/:id?").get((req, res) => {
+  db.Recipe.findOne({ where: { id: Number(req.params.id) } }).then(data => {
+    res.json(data);
+  }).catch(err => res.json(err));
+});
+
 router.route("/addrecipe").post(upload, (req, res) => {
   console.log("add ", req.body, " file ", req.file)
   db.Recipe.create({
