@@ -191,7 +191,13 @@ router.route("/profile/:id?").get((req, res) => {
 });
 
 router.route("/viewrecipe/:id?").get((req, res) => {
-  db.Recipe.findOne({ where: { id: Number(req.params.id) } }).then(data => {
+  db.Recipe.findOne({ 
+    where: { 
+      id: Number(req.params.id) 
+    },
+    include: db.User
+  }).then(data => {
+    console.log("my user data", data.User);
     res.json(data);
   }).catch(err => res.json(err));
 });
@@ -200,7 +206,7 @@ router.route("/addrecipe").post(upload, (req, res) => {
   console.log("add ", req.body, " file ", req.file)
   db.Recipe.create({
     name: req.body.name,
-    author: req.body.author,
+    UserId: req.body.author,
     category: req.body.category,
     ingredients: req.body.ingredients,
     steps: req.body.steps,
@@ -210,6 +216,16 @@ router.route("/addrecipe").post(upload, (req, res) => {
   }).then(data => {
     res.json(data);
   });
+
+  router.route("/addcomment").post((req, res) => {
+    console.log("add comment ", req.body)
+    db.Comment.create({
+      comment: req.body.comment,
+      RecipeId: req.body.recipeId,
+    }).then(data => {
+      res.json(data);
+    });
+  })
 })
 
 

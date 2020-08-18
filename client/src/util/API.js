@@ -37,6 +37,10 @@ export default {
     return axios.post("/api/addrecipe", data)
   },
 
+  addComment: function(data){
+    return axios.post("/api/addcomment", data)
+  },
+
   getOne: function(data){
     return axios.get(data);
   }

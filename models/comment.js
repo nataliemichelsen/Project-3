@@ -3,9 +3,6 @@ module.exports = function(sequelize, DataTypes) {
       comment: {
         type: DataTypes.TEXT,
         allowNull: false
-      },
-      author: {
-        type: DataTypes.INTEGER
       }
     });
   

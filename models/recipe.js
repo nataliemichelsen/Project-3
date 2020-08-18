@@ -4,9 +4,6 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      author: {
-        type: DataTypes.INTEGER
-      },
       category: {
           type: DataTypes.INTEGER
       },
@@ -30,6 +27,14 @@ module.exports = function(sequelize, DataTypes) {
     Recipe.associate = function(models) {
         Recipe.hasMany(models.Comment, {
         onDelete: "cascade"
+      });
+    };
+
+    Recipe.associate = function(models) {
+      Recipe.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
       });
     };
     return Recipe;
