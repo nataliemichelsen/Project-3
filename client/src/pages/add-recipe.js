@@ -17,12 +17,13 @@ class Addrecipe extends React.Component {
       visibility: "",
       loading: true,
     };
+    this.handleChangeImage = this.handleChangeImage.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeAuthor = this.handleChangeAuthor.bind(this);
     this.handleChangeCategory = this.handleChangeCategory.bind(this);
     this.handleChangeIngredients = this.handleChangeIngredients.bind(this);
     this.handleChangeSteps = this.handleChangeSteps.bind(this);
-    this.handleChangeTime = this.handleChangeTime.bind(this);
-    this.handleChangePicture = this.handleChangePicture.bind(this);
+    this.handleChangeDuration = this.handleChangeDuration.bind(this);
     this.handleChangeVisibility = this.handleChangeVisibility.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -50,11 +51,11 @@ class Addrecipe extends React.Component {
   }
 
   handleChangeTime(event) {
-    this.setState({ time: event.target.value });
+    this.setState({ duration: event.target.value });
   }
 
-  handleChangePicture(event) {
-    this.setState({ picture: event.target.files[0] });
+  handleChangeImage(event) {
+    this.setState({ image: event.target.files[0] });
   }
 
   handleChangeVisibility(event) {
@@ -69,7 +70,7 @@ class Addrecipe extends React.Component {
     formData.append("category", this.state.category);
     formData.append("ingredients", this.state.ingredients);
     formData.append("steps", this.state.steps);
-    formData.append("time", this.state.time);
+    formData.append("time", this.state.duration);
     formData.append("picture", this.state.picture);
     formData.append("visibility", this.state.visibility);
 
@@ -159,8 +160,8 @@ class Addrecipe extends React.Component {
           Estimate Duration (in minutes)
           <input
             type="number"
-            value={this.state.time}
-            onChange={this.handleChangeTime}
+            value={this.state.duration}
+            onChange={this.handleChangeDuration}
           />
         </label>
         <br />
