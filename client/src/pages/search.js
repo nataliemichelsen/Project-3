@@ -42,7 +42,14 @@ class Search extends React.Component {
 
 render() {
   return (
+    <div>
+      <br></br>
+
+    <div className="text-center">
+      <h1 className="search-info">Use this page to search for recipes</h1>
+      <br></br>
     <form>
+    
       <label>
       <input type="text" value={this.state.search} onChange={this.handleChangeSearch} />
       </label>
@@ -50,6 +57,8 @@ render() {
       <button className="search-button">Search</button>
       </label>
     </form>
+    </div>
+    </div>
   );
 }
 }
