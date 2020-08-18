@@ -33,8 +33,16 @@ class Addrecipe extends React.Component {
     this.setState({ author: auth.data.id, loading: false });
   }
 
+  handleChangeImage(event) {
+    this.setState({ image: event.target.files[0] });
+  }
+  
   handleChangeName(event) {
     this.setState({ name: event.target.value });
+  }
+
+  handleChangeAuthor(event) {
+    this.setState({ author: event.target.value });
   }
 
   handleChangeCategory(event) {
@@ -50,12 +58,8 @@ class Addrecipe extends React.Component {
     this.setState({ steps: event.target.value });
   }
 
-  handleChangeTime(event) {
+  handleChangeDuration(event) {
     this.setState({ duration: event.target.value });
-  }
-
-  handleChangeImage(event) {
-    this.setState({ image: event.target.files[0] });
   }
 
   handleChangeVisibility(event) {
@@ -70,7 +74,7 @@ class Addrecipe extends React.Component {
     formData.append("category", this.state.category);
     formData.append("ingredients", this.state.ingredients);
     formData.append("steps", this.state.steps);
-    formData.append("time", this.state.duration);
+    formData.append("duration", this.state.duration);
     formData.append("picture", this.state.picture);
     formData.append("visibility", this.state.visibility);
 
@@ -105,7 +109,7 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Recipe Name
+          Recipe Name:
           <input
             type="text"
             value={this.state.name}
@@ -114,7 +118,7 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Author
+          Author:
           <input
             type="text"
             value={this.state.author}
@@ -123,23 +127,28 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Category
+          Category:
           <select onChange={this.handleChangeCategory} defaultValue="1">
-            <option value="1">Dessert</option>
-            <option value="2">Breakfast</option>
-            <option value="3">Lunch</option>
-            <option value="4">Dinner</option>
-            <option value="5">Side Dish</option>
-            <option value="6">Appetizer</option>
-            <option value="7">Beverage</option>
-            <option value="8">Entree</option>
-            <option value="9">Holiday</option>
-            <option value="10">Special Diet</option>
+            <option value="1">Breakfast</option>
+            <option value="2">Lunch</option>
+            <option value="3">Dinner</option>
+            <option value="4">Dessert</option>
+            <option value="5">Entree</option>
+            <option value="6">Side Dish</option>
+            <option value="7">Appetizer</option>
+            <option value="8">Beverage</option>
+            <option value="9">Holiday Dish</option>
+            <option value="10">Vegetarian</option>
+            <option value="11">Vegan</option>
+            <option value="12">Paleo</option>
+            <option value="13">Gluten Free</option>
+            <option value="14">Soy Free</option>
+            <option value="15">Dairy Free</option>
           </select>
         </label>
         <br />
         <label>
-          Ingredients
+          Ingredients:
           <textarea
             type="text"
             value={this.state.ingredients}
@@ -148,7 +157,7 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Steps
+          Steps:
           <textarea
             type="text"
             value={this.state.steps}
@@ -157,7 +166,7 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Estimate Duration (in minutes)
+          Recipe Duration:
           <input
             type="number"
             value={this.state.duration}
@@ -166,10 +175,10 @@ class Addrecipe extends React.Component {
         </label>
         <br />
         <label>
-          Recipe private / public?
+          Is this recipe private or public?
           <select onChange={this.handleChangeVisibility} defaultValue="1">
-            <option value="1">True</option>
-            <option value="0">False</option>
+            <option value="1">Private</option>
+            <option value="0">Public</option>
           </select>
         </label>
         <br />
