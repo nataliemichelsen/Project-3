@@ -75,7 +75,7 @@ render() {
     return (<center><h1>Loading...</h1></center>)
   }
   return (
-    <form onSubmit={this.handleSubmit} encType="multipart/form-data">
+    <form onSubmit={this.handleSubmit} encType="multipart/form-data" className="text-center">
       <label>
         Name of the recipe
       <input type="text" value={this.state.name} onChange={this.handleChangeName} />
