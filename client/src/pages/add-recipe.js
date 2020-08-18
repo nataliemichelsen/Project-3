@@ -33,8 +33,16 @@ class Addrecipe extends React.Component {
     this.setState({ author: auth.data.id, loading: false });
   }
 
+  handleChangeImage(event) {
+    this.setState({ image: event.target.files[0] });
+  }
+  
   handleChangeName(event) {
     this.setState({ name: event.target.value });
+  }
+
+  handleChangeAuthor(event) {
+    this.setState({ author: event.target.value });
   }
 
   handleChangeCategory(event) {
@@ -50,12 +58,8 @@ class Addrecipe extends React.Component {
     this.setState({ steps: event.target.value });
   }
 
-  handleChangeTime(event) {
+  handleChangeDuration(event) {
     this.setState({ duration: event.target.value });
-  }
-
-  handleChangeImage(event) {
-    this.setState({ image: event.target.files[0] });
   }
 
   handleChangeVisibility(event) {
