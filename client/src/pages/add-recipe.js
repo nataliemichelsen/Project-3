@@ -17,7 +17,7 @@ class Addrecipe extends React.Component {
       visibility: "",
       loading: true,
     };
-    this.handleChangeImage = this.handleChangeImage.bind(this);
+    this.handleChangePicture = this.handleChangePicture.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeAuthor = this.handleChangeAuthor.bind(this);
     this.handleChangeCategory = this.handleChangeCategory.bind(this);
@@ -33,7 +33,7 @@ class Addrecipe extends React.Component {
     this.setState({ author: auth.data.id, loading: false });
   }
 
-  handleChangeImage(event) {
+  handleChangePicture(event) {
     this.setState({ image: event.target.files[0] });
   }
   
