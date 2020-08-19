@@ -34,7 +34,7 @@ class Addrecipe extends React.Component {
   }
 
   handleChangePicture(event) {
-    this.setState({ image: event.target.files[0] });
+    this.setState({ picture: event.target.files[0] });
   }
   
   handleChangeName(event) {
