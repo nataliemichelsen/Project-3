@@ -23,7 +23,7 @@ class Addrecipe extends React.Component {
     this.handleChangeCategory = this.handleChangeCategory.bind(this);
     this.handleChangeIngredients = this.handleChangeIngredients.bind(this);
     this.handleChangeSteps = this.handleChangeSteps.bind(this);
-    this.handleChangeDuration = this.handleChangeDuration.bind(this);
+    this.handleChangeTime = this.handleChangeTime.bind(this);
     this.handleChangeVisibility = this.handleChangeVisibility.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -58,8 +58,8 @@ class Addrecipe extends React.Component {
     this.setState({ steps: event.target.value });
   }
 
-  handleChangeDuration(event) {
-    this.setState({ duration: event.target.value });
+  handleChangeTime(event) {
+    this.setState({ time: event.target.value });
   }
 
   handleChangeVisibility(event) {
@@ -74,7 +74,7 @@ class Addrecipe extends React.Component {
     formData.append("category", this.state.category);
     formData.append("ingredients", this.state.ingredients);
     formData.append("steps", this.state.steps);
-    formData.append("duration", this.state.duration);
+    formData.append("time", this.state.time);
     formData.append("picture", this.state.picture);
     formData.append("visibility", this.state.visibility);
 
@@ -169,8 +169,8 @@ class Addrecipe extends React.Component {
           Recipe Duration:
           <input
             type="number"
-            value={this.state.duration}
-            onChange={this.handleChangeDuration}
+            value={this.state.time}
+            onChange={this.handleChangeTime}
           />
         </label>
         <br />

@@ -89,6 +89,24 @@ function Nav() {
           <li className="navbar">
             <Link
               className="nav-link"
+              to="/login"
+              style={{ color: "#333333" }}
+            >
+              Lonin
+            </Link>
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
+              to="/signup"
+              style={{ color: "#333333" }}
+            >
+              Signup
+            </Link>
+          </li>
+          <li className="navbar">
+            <Link
+              className="nav-link"
               to="/logout"
               style={{ color: "#333333" }}
             >
